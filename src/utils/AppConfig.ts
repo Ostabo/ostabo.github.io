@@ -1,6 +1,6 @@
 export const AppConfig = {
-  site_name: 'React landing page',
-  title: 'React landing page template 2021',
-  description: 'Production ready plug n play landing page!',
+  site_name: 'Ostabo - Dev Page',
+  title: 'Ostabo - Dev Page',
+  description: 'Oskar Borkenhagen - Ostabo - Software Engineer',
   locale: 'en',
 };
