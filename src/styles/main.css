@@ -2,20 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
-:root {
-  --color-primary: #ec4755;
-  --color-secondary: #a12c34;
-  --color-tertiaty: #99a0a3;
+html {
+  scrollbar-width: thin;
 }
 
 a {
+  cursor: pointer;
 }
-
-a:hover {
-}
-
-
 
 .content p {
   @apply my-6;

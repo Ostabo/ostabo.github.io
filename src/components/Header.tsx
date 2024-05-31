@@ -21,7 +21,6 @@ const Menu = () => {
       >
         <polygon points="50,0 100,0 50,100 0,100" />
       </svg>
-
       <Popover>
         <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
           <nav
@@ -30,7 +29,7 @@ const Menu = () => {
           >
             <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
               <div className="flex items-center justify-between w-full md:w-auto">
-                <a href="#">
+                <a href="">
                   <span className="sr-only">{companyName}</span>
                   <img alt="logo" className="h-16 w-auto sm:h-16" src={logo} />
                 </a>
@@ -59,10 +58,10 @@ const Menu = () => {
                 </Link>
               ))}
               <a
-                href="#"
+                href={callToAction.href}
                 className={`font-medium text-primary hover:text-secondary`}
               >
-                Call to action
+                {callToAction.text}
               </a>
             </div>
           </nav>

@@ -6,7 +6,7 @@
   "navigation": [
     {
       "name": "Skills",
-      "href": "product"
+      "href": "skills"
     },
     {
       "name": "About",
@@ -20,10 +20,10 @@
   "mainHero": {
     "title": "SOMETIMES THE PRODUCT IS",
     "subtitle": "YOU;ME;OSTABO;OSKAR BORKENHAGEN",
-    "img": "/assets/images/happyTeam.jpeg",
+    "img": "/assets/images/oskar.png",
     "primaryAction": {
       "text": "Skillset",
-      "href": "product"
+      "href": "skills"
     }
   },
   "product": {

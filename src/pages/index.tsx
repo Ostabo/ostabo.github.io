@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
 import MainHeroImage from '../components/MainHeroImage';
-import Product from '../components/Product';
+import Skills from '../components/Skills';
 
 const App = () => {
   return (
@@ -25,7 +25,7 @@ const App = () => {
       <Canvas />
       <LazyShow>
         <>
-          <Product />
+          <Skills />
           <Canvas />
         </>
       </LazyShow>

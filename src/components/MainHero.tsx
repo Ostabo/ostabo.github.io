@@ -11,7 +11,7 @@ const MainHero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCounter((prevCounter) => (prevCounter + 1) % partSubTitles.length);
-    }, 2000);
+    }, 2500);
     return () => clearInterval(interval);
   }, [partSubTitles.length]);
   return (
