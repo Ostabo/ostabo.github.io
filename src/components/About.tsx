@@ -10,11 +10,11 @@ const About = () => {
   return (
     <div
       id="about"
-      className="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-10"
+      className="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-2"
     >
       <div className="flex flex-col items-center justify-center">
         <div>
-          <img src={logo} alt={companyName} className="w-16 h-16" />
+          <img src={logo} alt={companyName} className="w-12 h-12 m-6" />
         </div>
         {socialMedia?.github ? (
           <>

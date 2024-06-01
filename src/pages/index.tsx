@@ -1,7 +1,7 @@
 import React from 'react';
 
 import About from '../components/About';
-import Canvas from '../components/Canvas';
+import { AnimatedDivider } from '../components/AnimatedDivider';
 import Header from '../components/Header';
 import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
@@ -22,13 +22,13 @@ const App = () => {
         </div>
         <MainHeroImage />
       </div>
-      <Canvas />
+      <AnimatedDivider></AnimatedDivider>
       <LazyShow>
         <>
           <Skills />
-          <Canvas />
         </>
       </LazyShow>
+      <AnimatedDivider></AnimatedDivider>
       <LazyShow>
         <>
           <About />
