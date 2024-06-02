@@ -26,23 +26,6 @@
       "href": "skills"
     }
   },
-  "skills": {
-    "title": "Skillset & Experience",
-    "items": [
-      {
-        "name": "react",
-        "weight": 4
-      },
-      {
-        "name": "angular",
-        "weight": 10
-      },
-      {
-        "name": "vue",
-        "weight": 6
-      }
-    ]
-  },
   "features": {
     "title": "Latest & greatest ",
     "subtitle": "All the best technologies out there!",
@@ -74,5 +57,234 @@
     "socialMedia": {
       "github": "https://github.com/ostabo"
     }
+  },
+  "skills": {
+    "title": "Skillset & Experience",
+    "items": [
+      {
+        "name": "angular",
+        "weight": 300
+      },
+      {
+        "name": "javascript",
+        "weight": 90
+      },
+      {
+        "name": "typescript",
+        "weight": 90
+      },
+      {
+        "name": "docker",
+        "weight": 90
+      },
+      {
+        "name": "html5",
+        "weight": 80
+      },
+      {
+        "name": "css3",
+        "weight": 300
+      },
+      {
+        "name": "java",
+        "weight": 80
+      },
+      {
+        "name": "spring",
+        "weight": 70
+      },
+      {
+        "name": "vuejs",
+        "weight": 70
+      },
+      {
+        "name": "react",
+        "weight": 38
+      },
+      {
+        "name": "nodejs",
+        "weight": 70
+      },
+      {
+        "name": "nuxtjs",
+        "weight": 30
+      },
+      {
+        "name": "nextjs",
+        "weight": 15
+      },
+      {
+        "name": "vitejs",
+        "weight": 45
+      },
+      {
+        "name": "sass",
+        "weight": 50
+      },
+      {
+        "name": "bootstrap",
+        "weight": 38
+      },
+      {
+        "name": "tailwindcss",
+        "weight": 60
+      },
+      {
+        "name": "scala",
+        "weight": 70
+      },
+      {
+        "name": "maven",
+        "weight": 60
+      },
+      {
+        "name": "python",
+        "weight": 38
+      },
+      {
+        "name": "c",
+        "weight": 38
+      },
+      {
+        "name": "postgresql",
+        "weight": 38
+      },
+      {
+        "name": "git",
+        "weight": 70
+      },
+      {
+        "name": "github",
+        "weight": 50
+      },
+      {
+        "name": "githubactions",
+        "weight": 45
+      },
+      {
+        "name": "jenkins",
+        "weight": 38
+      },
+      {
+        "name": "intellij",
+        "weight": 45
+      },
+      {
+        "name": "npm",
+        "weight": 30,
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg"
+      },
+      {
+        "name": "pnpm",
+        "weight": 30
+      },
+      {
+        "name": "amazonwebservices",
+        "weight": 30,
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+      },
+      {
+        "name": "angularmaterial",
+        "weight": 70
+      },
+      {
+        "name": "bitbucket",
+        "weight": 30
+      },
+      {
+        "name": "blender",
+        "weight": 20
+      },
+      {
+        "name": "chrome",
+        "weight": 20
+      },
+      {
+        "name": "codecov",
+        "weight": 20,
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codecov/codecov-plain.svg"
+      },
+      {
+        "name": "dart",
+        "weight": 55
+      },
+      {
+        "name": "flutter",
+        "weight": 70
+      },
+      {
+        "name": "firebase",
+        "weight": 45
+      },
+      {
+        "name": "gitlab",
+        "weight": 38
+      },
+      {
+        "name": "jira",
+        "weight": 38
+      },
+      {
+        "name": "less",
+        "weight": 30,
+        "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/less/less-plain-wordmark.svg"
+      },
+      {
+        "name": "latex",
+        "weight": 20
+      },
+      {
+        "name": "markdown",
+        "weight": 30
+      },
+      {
+        "name": "mysql",
+        "weight": 38
+      },
+      {
+        "name": "nginx",
+        "weight": 38
+      },
+      {
+        "name": "oracle",
+        "weight": 30
+      },
+      {
+        "name": "raspberrypi",
+        "weight": 20
+      },
+      {
+        "name": "rxjs",
+        "weight": 60
+      },
+      {
+        "name": "selenium",
+        "weight": 30
+      },
+      {
+        "name": "ssh",
+        "weight": 20
+      },
+      {
+        "name": "supabase",
+        "weight": 45
+      },
+      {
+        "name": "vuetify",
+        "weight": 30
+      },
+      {
+        "name": "yarn",
+        "weight": 30
+      },
+      {
+        "name": "webpack",
+        "weight": 15
+      },
+      {
+        "name": "firefox",
+        "weight": 30
+      }
+    ]
   }
 }
