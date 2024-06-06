@@ -1,40 +1,46 @@
-import React, { useRef, useState } from 'react';
+import React, { Suspense, useState } from 'react';
 
-import { Canvas, useFrame, ThreeElements } from '@react-three/fiber';
-import * as THREE from 'three';
+import { Canvas, useFrame, useLoader } from '@react-three/fiber';
+import { Grid } from 'react-loader-spinner';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
-export function Box(props: ThreeElements['mesh']) {
-  const ref = useRef<THREE.Mesh>(null!);
-  const [hovered, hover] = useState(false);
-  const [clicked, click] = useState(false);
-  useFrame((_, delta) => (ref.current.rotation.x += delta));
-  return (
-    <mesh
-      {...props}
-      ref={ref}
-      scale={clicked ? 1.5 : 1}
-      onClick={(_) => click(!clicked)}
-      onPointerOver={(_) => hover(true)}
-      onPointerOut={(_) => hover(false)}
-    >
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
-    </mesh>
-  );
+export function Head() {
+  const model = useLoader(GLTFLoader, '/assets/blender/head.glb');
+  const [goingRight, setGoingRight] = useState(true);
+  useFrame((_) => {
+    model.scene.rotation.y += goingRight ? 0.001 : -0.001;
+    if (model.scene.rotation.y > 0.8) setGoingRight(false);
+    if (model.scene.rotation.y < -0.8) setGoingRight(true);
+  });
+  return <primitive object={model.scene}></primitive>;
 }
 
 export const ThreeJsCanvas = () => (
-  <Canvas>
-    <ambientLight intensity={Math.PI / 2} />
-    <spotLight
-      position={[10, 10, 10]}
-      angle={0.15}
-      penumbra={1}
-      decay={0}
-      intensity={Math.PI}
-    />
-    <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
-    <Box position={[-1.2, 0, 0]} />
-    <Box position={[1.2, 0, 0]} />
-  </Canvas>
+  <Suspense
+    fallback={
+      <Grid
+        visible={true}
+        height="80"
+        width="80"
+        color="#474fec"
+        ariaLabel="grid-loading"
+        radius="12.5"
+        wrapperClass={'w-full h-full flex justify-center items-center'}
+      />
+    }
+  >
+    <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 0, 0.75] }}>
+      <ambientLight intensity={Math.PI / 2} />
+      <spotLight
+        position={[5, 5, 5]}
+        angle={0.15}
+        penumbra={1}
+        decay={0}
+        intensity={Math.PI}
+      />
+      <pointLight position={[-5, -5, -5]} decay={0} intensity={Math.PI} />
+
+      <Head />
+    </Canvas>
+  </Suspense>
 );

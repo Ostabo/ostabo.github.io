@@ -29,23 +29,19 @@ const DevIcon = ({
   index: number;
   url?: string;
 }) => {
-  const calculatePosition = (
-    ind: number,
-    totalItems: number,
-    maxRadius: number,
-  ) => {
-    const rings = Math.ceil(Math.sqrt(totalItems)) * 2;
-    const angleStep = ((Math.PI * 2) / totalItems) * 2 + weight / 100;
+  const calculatePosition = (ind: number, totalItems: number) => {
+    const rings = Math.ceil(Math.sqrt(totalItems));
+    const angleStep = (Math.PI * 2) / totalItems;
     const ring = Math.floor(ind / rings);
     const angle = ind * angleStep;
-    const radius = maxRadius * (ring / rings) + weight / 100;
+    const radius = ring / rings + 500;
 
     const x = radius * Math.cos(angle) - weight / 2;
     const y = radius * Math.sin(angle) - weight / 2;
     return { x, y };
   };
 
-  const { x, y } = calculatePosition(index, length, length * 10);
+  const { x, y } = calculatePosition(index, length);
 
   const imageSrc =
     url ??
@@ -61,7 +57,7 @@ const DevIcon = ({
   }, [imageSrc]);
   return (
     <div
-      className={`rounded-full w-fit h-fit overflow-clip absolute scale-150`}
+      className={`rounded-full w-fit h-fit overflow-clip absolute`}
       style={{
         left: `${x}px`,
         top: `${y}px`,
