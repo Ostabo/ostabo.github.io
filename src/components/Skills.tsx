@@ -38,7 +38,7 @@ const DevIcon = ({
     });
   }, [imageSrc]);
   return (
-    <div className={`rounded-full w-fit h-fit overflow-clip`}>
+    <div className={`rounded-full w-fit h-fit overflow-clip`} title={name}>
       <img
         id={name}
         src={imageSrc}
@@ -83,12 +83,12 @@ export const Skills = () => {
           className={`flex justify-evenly items-center flex-wrap gap-1 mx-auto`}
           key={ind}
         >
-          {items.map((item) => (
+          {items.map((item, i) => (
             <DevIcon
-              key={item.name}
+              key={i}
               name={item.name}
               url={item.url}
-              weight={item.weight + 20}
+              weight={item.weight + 20 + (items.length === 1 ? 50 : 0)}
             />
           ))}
         </div>
