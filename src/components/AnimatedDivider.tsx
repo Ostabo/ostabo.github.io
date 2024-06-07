@@ -18,6 +18,7 @@ export const AnimatedDivider = () => {
       setInit(true);
     });
   }, []);
+  const nodeCount = typeof window !== 'undefined' ? window.innerWidth / 50 : 20;
   const options = useMemo(
     () =>
       ({
@@ -54,7 +55,7 @@ export const AnimatedDivider = () => {
             straight: false,
           },
           number: {
-            value: 36,
+            value: nodeCount,
           },
           opacity: {
             value: 0.5,

@@ -19,30 +19,12 @@ function addOpacity(hexColor: string) {
 const DevIcon = ({
   name,
   weight,
-  length,
-  index,
   url,
 }: {
   name: string;
   weight: number;
-  length: number;
-  index: number;
   url?: string;
 }) => {
-  const calculatePosition = (ind: number, totalItems: number) => {
-    const rings = Math.ceil(Math.sqrt(totalItems));
-    const angleStep = (Math.PI * 2) / totalItems;
-    const ring = Math.floor(ind / rings);
-    const angle = ind * angleStep;
-    const radius = ring / rings + 500;
-
-    const x = radius * Math.cos(angle) - weight / 2;
-    const y = radius * Math.sin(angle) - weight / 2;
-    return { x, y };
-  };
-
-  const { x, y } = calculatePosition(index, length);
-
   const imageSrc =
     url ??
     `https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${name}/${name}-original.svg`;
@@ -56,13 +38,7 @@ const DevIcon = ({
     });
   }, [imageSrc]);
   return (
-    <div
-      className={`rounded-full w-fit h-fit overflow-clip absolute`}
-      style={{
-        left: `${x}px`,
-        top: `${y}px`,
-      }}
-    >
+    <div className={`rounded-full w-fit h-fit overflow-clip`}>
       <img
         id={name}
         src={imageSrc}
@@ -82,7 +58,7 @@ const DevIcon = ({
 export const Skills = () => {
   const { skills } = config;
   const normalDistributedItems: typeof skills.items = [];
-  skills.items.sort((a, b) => b.weight - a.weight);
+  skills.items.sort((a, b) => a.weight - b.weight);
   for (let i = 1; i < skills.items.length; i += 2) {
     normalDistributedItems.push(...skills.items.slice(i, i + 1));
   }
@@ -91,25 +67,32 @@ export const Skills = () => {
     secondHalf.push(...skills.items.slice(i, i + 1));
   }
   normalDistributedItems.push(...secondHalf.reverse());
+  const lines = normalDistributedItems.length / 3;
+  // split distributed items into 3 arrays
+  const distributedItems: (typeof normalDistributedItems)[] = [];
+  for (let i = 0; i < lines; i += 1) {
+    distributedItems.push(normalDistributedItems.slice(i * 3, i * 3 + 3));
+  }
   return (
     <section
-      className={`bg-background p-8 w-full flex items-center justify-items-center`}
+      className={`bg-background p-8 w-full flex items-center justify-content-center mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28`}
       id="skills"
     >
-      <div
-        className={`w-full h-fit flex relative translate-x-1/2 translate-y-1/2 min-w-dvw min-h-dvh`}
-      >
-        {skills.items.map((item, i) => (
-          <DevIcon
-            key={item.name}
-            name={item.name}
-            url={item.url}
-            weight={item.weight}
-            length={normalDistributedItems.length}
-            index={i}
-          />
-        ))}
-      </div>
+      {distributedItems.map((items, ind) => (
+        <div
+          className={`flex justify-evenly items-center flex-wrap gap-1 mx-auto`}
+          key={ind}
+        >
+          {items.map((item) => (
+            <DevIcon
+              key={item.name}
+              name={item.name}
+              url={item.url}
+              weight={item.weight + 20}
+            />
+          ))}
+        </div>
+      ))}
     </section>
   );
 };
