@@ -2,10 +2,16 @@ import React, { Suspense, useState } from 'react';
 
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { Grid } from 'react-loader-spinner';
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 export function Head() {
-  const model = useLoader(GLTFLoader, '/assets/blender/head.glb');
+  const draco = new DRACOLoader();
+  draco.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
+
+  const model = useLoader(GLTFLoader, '/assets/blender/head.glb', (loader) => {
+    loader.setDRACOLoader(draco);
+  });
   const [goingRight, setGoingRight] = useState(true);
   useFrame((_) => {
     model.scene.rotation.y += goingRight ? 0.001 : -0.001;
