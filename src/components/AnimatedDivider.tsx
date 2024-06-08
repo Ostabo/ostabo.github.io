@@ -70,7 +70,7 @@ export const AnimatedDivider = () => {
         detectRetina: true,
         zLayers: 1,
       }) as RecursivePartial<IOptions>,
-    [],
+    [nodeCount],
   );
 
   if (init) {

@@ -53,8 +53,8 @@ export const Projects = () => {
         className={`text-lg text-primary text-center border-2 rounded-2xl p-2`}
       >
         <q>
-          Once a new technology rolls over you, if you're not part of the
-          steamroller, you're part of the road.
+          Once a new technology rolls over you, if you&apos;re not part of the
+          steamroller, you&apos;re part of the road.
         </q>
         <br />
         <cite> - Stewart Brand</cite>
@@ -355,5 +355,3 @@ export const Projects = () => {
     </section>
   );
 };
-
-export default Projects;

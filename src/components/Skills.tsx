@@ -100,9 +100,11 @@ export const Skills = () => {
               name={item.name}
               weight={item.weight + 20 + (items.length === 1 ? 50 : 0)}
               tooltipPos={
+                // eslint-disable-next-line no-nested-ternary
                 i === 0
                   ? 'top'
-                  : i === 2
+                  : // eslint-disable-next-line no-nested-ternary
+                    i === 2
                     ? 'bottom'
                     : ind < distributedItems.length / 2 - 1
                       ? 'left'
@@ -116,5 +118,3 @@ export const Skills = () => {
     </section>
   );
 };
-
-export default Skills;

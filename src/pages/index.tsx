@@ -14,8 +14,8 @@ import Header from '../components/Header';
 import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
 import MainHeroImage from '../components/MainHeroImage';
-import Projects from '../components/Projects';
-import Skills from '../components/Skills';
+import { Projects } from '../components/Projects';
+import { Skills } from '../components/Skills';
 
 library.add(faPaperPlane);
 library.add(faCookieBite);
