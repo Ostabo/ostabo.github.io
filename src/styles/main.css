@@ -18,12 +18,12 @@ a {
   @apply my-6;
 }
 
-.timeline-cover {
+.timeline::after {
+  content: '';
   width: 100%;
-  height: calc(100% - 4rem - 1rem);
-  background: linear-gradient(180deg, #f7f7f700 40%, #fff9 100%);;
+  height: calc(100% + 8em);
+  background: linear-gradient(0deg, #fff9 0%, #f7f7f700 60%);
   position: absolute;
-  left: 0;
   z-index: 1;
   pointer-events: none;
 }

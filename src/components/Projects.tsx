@@ -60,9 +60,6 @@ export const Projects = () => {
         <cite> - Stewart Brand</cite>
       </h3>
       <div className={`grid grid-cols-3 py-16 border-b timeline`}>
-        {
-          // <div className="timeline-cover"></div>
-        }
         <div
           className={`px-4 rounded-r-lg justify-self-end text-end border-r h-20`}
         >
@@ -118,7 +115,7 @@ export const Projects = () => {
         <TimelineCenter
           left={''}
           right={'top-6'}
-          height={'h-36'}
+          height={'h-20'}
           rounded={'rounded-full'}
         />
         <div
@@ -145,7 +142,7 @@ export const Projects = () => {
         <TimelineCenter
           left={''}
           right={'top-2'}
-          height={'h-36'}
+          height={'h-20'}
           rounded={'rounded-t-full'}
         />
         <div
