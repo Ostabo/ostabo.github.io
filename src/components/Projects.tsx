@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { faAndroid } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-scroll';
@@ -34,7 +35,7 @@ const TimelineCenter = ({
       <></>
     )}
     <div
-      className={`bg-primary ${rounded} w-3 h-full absolute left-1/2 -translate-x-full`}
+      className={`bg-primary ${rounded} w-3 h-full absolute left-1/2 -translate-x-1/2`}
     ></div>
   </div>
 );
@@ -58,8 +59,10 @@ export const Projects = () => {
         <br />
         <cite> - Stewart Brand</cite>
       </h3>
-      <div className={`grid grid-cols-3 pt-16 timeline`}>
-        <div className="timeline-cover"></div>
+      <div className={`grid grid-cols-3 py-16 border-b timeline`}>
+        {
+          // <div className="timeline-cover"></div>
+        }
         <div
           className={`px-4 rounded-r-lg justify-self-end text-end border-r h-20`}
         >
@@ -112,9 +115,14 @@ export const Projects = () => {
         <div></div>
 
         <div></div>
-        <TimelineCenter left={''} right={'top-4'} rounded={'rounded-t-full'} />
+        <TimelineCenter
+          left={''}
+          right={'top-6'}
+          height={'h-36'}
+          rounded={'rounded-full'}
+        />
         <div
-          className={`px-4 rounded-lg border-l justify-self-start text-start`}
+          className={`px-4 rounded-lg h-6 mt-2 border-l justify-self-start text-start`}
         >
           <Link
             spy={true}
@@ -126,6 +134,33 @@ export const Projects = () => {
             className="font-medium text-gray-600 hover:text-secondary"
           >
             Filmfinder
+          </Link>
+        </div>
+
+        <div></div>
+        <TimelineCenter left={''} right={''} height={'h-4'} extra={'my-2'} />
+        <div></div>
+
+        <div></div>
+        <TimelineCenter
+          left={''}
+          right={'top-2'}
+          height={'h-36'}
+          rounded={'rounded-t-full'}
+        />
+        <div
+          className={`px-4 rounded-lg h-6 border-l justify-self-start text-start`}
+        >
+          <Link
+            spy={true}
+            active="active"
+            smooth={true}
+            duration={1000}
+            key="hexxagon"
+            to="hexxagon"
+            className="font-medium text-gray-600 hover:text-secondary"
+          >
+            Hexxagon
           </Link>
         </div>
 
@@ -196,7 +231,7 @@ export const Projects = () => {
           <h4 className={`text-xl`}>
             <b>2019</b>
           </h4>
-          <p className={``}>
+          <p>
             <i>Abitur</i>
             <br />
             Gymnasium - Markdorf, Germany
@@ -228,7 +263,7 @@ export const Projects = () => {
         <div></div>
       </div>
 
-      <div className={'grid grid-cols-2 gap-8 pt-32 lg:m-4'}>
+      <div className={'flex flex-wrap gap-8 pt-16 lg:m-4 justify-evenly'}>
         <div
           className={`rounded-lg border h-fit text-start lg:p-8 flex items-center justify-evenly flex-wrap`}
         >
@@ -238,6 +273,8 @@ export const Projects = () => {
             </h3>
             <span className={'block h-1 border-t w-28'}></span>
             <p>
+              Trailer Swipe App
+              <br />
               Group Project for App Development
               <br />
               <small>HTWG Konstanz</small>
@@ -253,6 +290,14 @@ export const Projects = () => {
                     icon={faArrowUpRightFromSquare}
                   />
                 </a>
+                <a
+                  href="/assets/filmfinder.apk"
+                  className={'text-secondary ps-4'}
+                  download="filmfinder.apk"
+                >
+                  Download APK
+                  <FontAwesomeIcon className={'px-1'} icon={faAndroid} />
+                </a>
               </small>
             </p>
           </span>
@@ -260,6 +305,53 @@ export const Projects = () => {
             src="/assets/images/filmfinder_logo_high_res.png"
             width={'150'}
             alt="filmfinder"
+          ></img>
+        </div>
+
+        <div
+          className={`rounded-lg border h-fit text-start lg:p-8 flex items-center justify-evenly flex-wrap`}
+        >
+          <span className={'p-4'}>
+            <h3 className={`text-2xl text-primary`} id="filmfinder">
+              Hexxagon
+            </h3>
+            <span className={'block h-1 border-t w-28'}></span>
+            <p>
+              Game - Group Project for
+              <br />
+              Software Engineering/Web Development
+              <br />
+              <small>HTWG Konstanz</small>
+              <br />
+              <small>
+                <a
+                  href="https://github.com/HexxagonHTWG/Hexxagon"
+                  className={'text-secondary'}
+                >
+                  GitHub
+                  <FontAwesomeIcon
+                    className={'px-1'}
+                    icon={faArrowUpRightFromSquare}
+                  />
+                </a>
+                <a
+                  href="https://hexxagonhtwg.github.io/Hexxagon/"
+                  className={'text-secondary ps-4'}
+                >
+                  Gatling Reports
+                  <FontAwesomeIcon
+                    className={'px-1'}
+                    icon={faArrowUpRightFromSquare}
+                  />
+                </a>
+              </small>
+            </p>
+          </span>
+          <img
+            src="/assets/images/hexxagon_logo.png"
+            width={'100'}
+            style={{ marginLeft: '25px', padding: '25px 0' }}
+            alt="hexxagon"
           ></img>
         </div>
       </div>

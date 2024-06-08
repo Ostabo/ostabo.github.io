@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
+import { faAndroid } from '@fortawesome/free-brands-svg-icons';
 import {
   faArrowUpRightFromSquare,
   faCookieBite,
@@ -19,6 +20,7 @@ import Skills from '../components/Skills';
 library.add(faPaperPlane);
 library.add(faCookieBite);
 library.add(faArrowUpRightFromSquare);
+library.add(faAndroid);
 
 const App = () => {
   return (
