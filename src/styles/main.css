@@ -4,6 +4,7 @@
 
 html {
   scrollbar-width: thin;
+  overflow-x: hidden;
 }
 
 a {
