@@ -4,19 +4,11 @@
 
 html {
   scrollbar-width: thin;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a {
   cursor: pointer;
-}
-
-.content p {
-  @apply my-6;
-}
-
-.content ul {
-  @apply my-6;
 }
 
 .timeline::after {
