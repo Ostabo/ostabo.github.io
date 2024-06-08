@@ -273,7 +273,7 @@ export const Projects = () => {
             </h3>
             <span className={'block h-1 border-t w-28'}></span>
             <p>
-              Trailer Swipe App
+              <i>Trailer Swipe App</i>
               <br />
               Group Project for App Development
               <br />
@@ -312,12 +312,12 @@ export const Projects = () => {
           className={`rounded-lg border h-fit text-start lg:p-8 flex items-center justify-evenly flex-wrap`}
         >
           <span className={'p-4'}>
-            <h3 className={`text-2xl text-primary`} id="filmfinder">
+            <h3 className={`text-2xl text-primary`} id="hexxagon">
               Hexxagon
             </h3>
             <span className={'block h-1 border-t w-28'}></span>
             <p>
-              Game - Group Project for
+              <i>Game</i> Group Project for
               <br />
               Software Engineering/Web Development
               <br />
