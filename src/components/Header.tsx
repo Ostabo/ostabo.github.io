@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Popover, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-scroll';
@@ -62,6 +64,7 @@ const Menu = () => {
                 className={`font-medium text-primary hover:text-secondary`}
               >
                 {callToAction.text}
+                <FontAwesomeIcon icon={faPaperPlane} className={'mx-2'} />
               </a>
             </div>
           </nav>

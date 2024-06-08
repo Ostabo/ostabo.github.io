@@ -1,12 +1,19 @@
 import React from 'react';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faCookieBite, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+
 import About from '../components/About';
 import { AnimatedDivider } from '../components/AnimatedDivider';
 import Header from '../components/Header';
 import LazyShow from '../components/LazyShow';
 import MainHero from '../components/MainHero';
 import MainHeroImage from '../components/MainHeroImage';
+import Projects from '../components/Projects';
 import Skills from '../components/Skills';
+
+library.add(faPaperPlane);
+library.add(faCookieBite);
 
 const App = () => {
   return (
@@ -30,6 +37,12 @@ const App = () => {
       <LazyShow>
         <>
           <Skills />
+        </>
+      </LazyShow>
+      <AnimatedDivider></AnimatedDivider>
+      <LazyShow>
+        <>
+          <Projects />
         </>
       </LazyShow>
       <AnimatedDivider></AnimatedDivider>

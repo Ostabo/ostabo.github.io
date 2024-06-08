@@ -43,6 +43,9 @@ const About = () => {
             </div>
           </>
         ) : null}
+        <span className={`text-gray-500`}>
+          © {new Date().getFullYear()} Ostabo
+        </span>
       </div>
     </div>
   );

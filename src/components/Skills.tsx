@@ -75,7 +75,7 @@ export const Skills = () => {
   }
   return (
     <section
-      className={`bg-background p-8 w-full flex items-center justify-content-center mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28`}
+      className={`bg-background p-8 w-full flex items-center justify-content-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
       id="skills"
     >
       {distributedItems.map((items, ind) => (
