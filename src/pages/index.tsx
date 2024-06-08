@@ -1,7 +1,11 @@
 import React from 'react';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCookieBite, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowUpRightFromSquare,
+  faCookieBite,
+  faPaperPlane,
+} from '@fortawesome/free-solid-svg-icons';
 
 import About from '../components/About';
 import { AnimatedDivider } from '../components/AnimatedDivider';
@@ -14,6 +18,7 @@ import Skills from '../components/Skills';
 
 library.add(faPaperPlane);
 library.add(faCookieBite);
+library.add(faArrowUpRightFromSquare);
 
 const App = () => {
   return (

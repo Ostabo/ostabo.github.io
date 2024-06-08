@@ -1,3 +1,5 @@
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Tooltip } from 'react-tooltip';
 
 const TimelineCenter = ({
@@ -74,11 +76,25 @@ export const Projects = () => {
           </p>
         </div>
         <TimelineCenter left={'top-0'} />
-        <div className={`px-4 justify-self-start text-start`}>
-          <h4 className={`text-xl`}>Project 3</h4>
-          <p className={``}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-            odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
+        <div
+          className={`px-4 rounded-l-lg border-l justify-self-start text-start`}
+        >
+          <h4 className={`text-xl`}>
+            <b>Skillworks AG</b>
+          </h4>
+          <p>
+            Konstanz, Germany
+            <br />
+            <i
+              data-tooltip-id="skillworks-bachelor"
+              data-tooltip-content={
+                'Development of a modular system for the efficient assembly of UI components for process control systems'
+              }
+              data-tooltip-place="bottom-end"
+            >
+              Bachelor Thesis
+              <Tooltip id="skillworks-bachelor" />
+            </i>
           </p>
         </div>
 
@@ -88,6 +104,30 @@ export const Projects = () => {
         <div></div>
         <TimelineCenter left={''} right={''} height={'h-4'} extra={'mb-2'} />
         <div></div>
+
+        <div></div>
+        <TimelineCenter left={''} right={'top-8'} rounded={'rounded-t-full'} />
+        <div
+          className={`px-4 rounded-lg border-l h-20 justify-self-start text-start`}
+        >
+          <h4 className={`text-xl`}>Filmfinder</h4>
+          <p>
+            Group Project - App Development
+            <br />
+            <small>
+              <a
+                href="https://github.com/filmfinder/filmfinder"
+                className={'text-secondary'}
+              >
+                GitHub
+                <FontAwesomeIcon
+                  className={'px-1'}
+                  icon={faArrowUpRightFromSquare}
+                />
+              </a>
+            </small>
+          </p>
+        </div>
 
         <div
           className={`px-4 rounded-tr-lg justify-self-end text-end border-r`}
@@ -112,12 +152,30 @@ export const Projects = () => {
             </i>
           </p>
         </div>
-        <TimelineCenter left={'bottom-0'} right={'top-8'} />
-        <div className={`px-4 rounded-lg justify-self-start text-start`}>
-          <h4 className={`text-xl`}>Filmfinder</h4>
+        <TimelineCenter
+          left={'bottom-0'}
+          right={'top-16'}
+          rounded={'rounded-b-full'}
+        />
+        <div
+          className={`px-4 mt-8 rounded-lg border-l h-20 justify-self-start text-start`}
+        >
+          <h4 className={`text-xl`}>
+            <b>Skillworks AG</b>
+          </h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec
-            odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
+            Konstanz, Germany
+            <br />
+            <i
+              data-tooltip-id="skillworks-working"
+              data-tooltip-content={
+                'Fullstack/DevOps/Angular-Library-Management'
+              }
+              data-tooltip-place="bottom-start"
+            >
+              Working Student
+              <Tooltip id="skillworks-working" />
+            </i>
           </p>
         </div>
 
@@ -134,7 +192,7 @@ export const Projects = () => {
         <TimelineCenter left={''} right={''} height={'h-4'} extra={'mb-2'} />
         <div></div>
 
-        <div className={`px-4 rounded-lg justify-self-end text-end`}>
+        <div className={`px-4 rounded-lg border-r justify-self-end text-end`}>
           <h4 className={`text-xl`}>
             <b>2019</b>
           </h4>
@@ -144,49 +202,29 @@ export const Projects = () => {
             Gymnasium - Markdorf, Germany
           </p>
         </div>
-        <TimelineCenter left="bottom-1/4" height={'h-24'} />
-        <div className={`px-4 rounded-lg justify-self-start text-start`}>
-          <h4 className={`text-xl`}>
+        <TimelineCenter left="bottom-1/4" right="top-1/4" height={'h-24'} />
+        <div
+          className={`px-4 rounded-lg border-l h-12 justify-self-start text-start`}
+        >
+          <h4 className={`text-sm`}>
             <b>Lidl Vertriebs - GmbH & Co.KG</b>
           </h4>
-          <p className={``}>Cashier</p>
+          <p>
+            <small>Cashier</small>
+          </p>
         </div>
 
         <div></div>
-        <TimelineCenter
-          left={''}
-          right={''}
-          rounded={'rounded-full'}
-          height={'h-8'}
-          extra={'mt-2'}
-        />
+        <TimelineCenter left={''} right={''} height={'h-8'} extra={'mt-2'} />
         <div></div>
         <div></div>
-        <TimelineCenter
-          left={''}
-          right={''}
-          rounded={'rounded-full'}
-          height={'h-4'}
-          extra={'mt-2'}
-        />
+        <TimelineCenter left={''} right={''} height={'h-4'} extra={'mt-2'} />
         <div></div>
         <div></div>
-        <TimelineCenter
-          left={''}
-          right={''}
-          rounded={'rounded-full'}
-          height={'h-4'}
-          extra={'my-2'}
-        />
+        <TimelineCenter left={''} right={''} height={'h-4'} extra={'my-2'} />
         <div></div>
         <div></div>
-        <TimelineCenter
-          left={''}
-          right={''}
-          rounded={'rounded-full'}
-          height={'h-4'}
-          extra={'mb-2'}
-        />
+        <TimelineCenter left={''} right={''} height={'h-4'} extra={'mb-2'} />
         <div></div>
       </div>
     </section>
