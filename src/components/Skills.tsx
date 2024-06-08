@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { FastAverageColor, FastAverageColorResult } from 'fast-average-color';
+import { Tooltip } from 'react-tooltip';
 
 import config from '../config/index.json';
 
@@ -19,10 +20,12 @@ function addOpacity(hexColor: string) {
 const DevIcon = ({
   name,
   weight,
+  tooltipPos,
   url,
 }: {
   name: string;
   weight: number;
+  tooltipPos: 'top' | 'left' | 'right' | 'bottom';
   url?: string;
 }) => {
   const imageSrc =
@@ -38,20 +41,28 @@ const DevIcon = ({
     });
   }, [imageSrc]);
   return (
-    <div className={`rounded-full w-fit h-fit overflow-clip`} title={name}>
-      <img
-        id={name}
-        src={imageSrc}
-        width={`${weight}px`}
-        height="auto"
-        style={{
-          backgroundColor: addOpacity(facRes?.hexa ?? '#ffffff'),
-          aspectRatio: '1 / 1',
-          padding: '15%',
-        }}
-        alt={name}
-      />
-    </div>
+    <>
+      <div
+        className={`rounded-full w-fit h-fit overflow-clip`}
+        data-tooltip-id={name}
+        data-tooltip-content={name}
+        data-tooltip-place={tooltipPos}
+      >
+        <img
+          id={name}
+          src={imageSrc}
+          width={`${weight}px`}
+          height="auto"
+          style={{
+            backgroundColor: addOpacity(facRes?.hexa ?? '#ffffff'),
+            aspectRatio: '1 / 1',
+            padding: '15%',
+          }}
+          alt={name}
+        />
+      </div>
+      <Tooltip id={name} />
+    </>
   );
 };
 
@@ -87,8 +98,17 @@ export const Skills = () => {
             <DevIcon
               key={i}
               name={item.name}
-              url={item.url}
               weight={item.weight + 20 + (items.length === 1 ? 50 : 0)}
+              tooltipPos={
+                i === 0
+                  ? 'top'
+                  : i === 2
+                    ? 'bottom'
+                    : ind < distributedItems.length / 2 - 1
+                      ? 'left'
+                      : 'right'
+              }
+              url={item.url}
             />
           ))}
         </div>
