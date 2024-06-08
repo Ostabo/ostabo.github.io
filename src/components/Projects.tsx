@@ -1,5 +1,8 @@
+import React from 'react';
+
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from 'react-scroll';
 import { Tooltip } from 'react-tooltip';
 
 const TimelineCenter = ({
@@ -31,7 +34,7 @@ const TimelineCenter = ({
       <></>
     )}
     <div
-      className={`bg-primary ${rounded} w-3 h-full absolute left-1/2 -translate-x-1/2`}
+      className={`bg-primary ${rounded} w-3 h-full absolute left-1/2 -translate-x-full`}
     ></div>
   </div>
 );
@@ -39,10 +42,10 @@ const TimelineCenter = ({
 export const Projects = () => {
   return (
     <section
-      className={`bg-background p-8 w-full flex flex-col items-center justify-content-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
+      className={`bg-background p-8 w-full flex flex-col justify-content-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
       id="projects"
     >
-      <h2 className={`text-3xl font-bold text-gray-900 p-8`}>
+      <h2 className={`text-3xl font-bold text-gray-900 p-8 self-center`}>
         Projects & Experience
       </h2>
       <h3
@@ -55,9 +58,10 @@ export const Projects = () => {
         <br />
         <cite> - Stewart Brand</cite>
       </h3>
-      <div className={`grid grid-cols-3 m-4 pt-16`}>
+      <div className={`grid grid-cols-3 pt-16 timeline`}>
+        <div className="timeline-cover"></div>
         <div
-          className={`px-4 rounded-br-lg justify-self-end text-end border-r h-1/2`}
+          className={`px-4 rounded-r-lg justify-self-end text-end border-r h-20`}
         >
           <h4 className={`text-xl`}>
             <b>2024</b>
@@ -75,7 +79,7 @@ export const Projects = () => {
             </i>
           </p>
         </div>
-        <TimelineCenter left={'top-0'} />
+        <TimelineCenter left={'top-4'} />
         <div
           className={`px-4 rounded-l-lg border-l justify-self-start text-start`}
         >
@@ -83,6 +87,8 @@ export const Projects = () => {
             <b>Skillworks AG</b>
           </h4>
           <p>
+            <small>Apr. 2024</small>
+            <br />
             Konstanz, Germany
             <br />
             <i
@@ -106,32 +112,24 @@ export const Projects = () => {
         <div></div>
 
         <div></div>
-        <TimelineCenter left={''} right={'top-8'} rounded={'rounded-t-full'} />
+        <TimelineCenter left={''} right={'top-4'} rounded={'rounded-t-full'} />
         <div
-          className={`px-4 rounded-lg border-l h-20 justify-self-start text-start`}
+          className={`px-4 rounded-lg border-l justify-self-start text-start`}
         >
-          <h4 className={`text-xl`}>Filmfinder</h4>
-          <p>
-            Group Project - App Development
-            <br />
-            <small>
-              <a
-                href="https://github.com/filmfinder/filmfinder"
-                className={'text-secondary'}
-              >
-                GitHub
-                <FontAwesomeIcon
-                  className={'px-1'}
-                  icon={faArrowUpRightFromSquare}
-                />
-              </a>
-            </small>
-          </p>
+          <Link
+            spy={true}
+            active="active"
+            smooth={true}
+            duration={1000}
+            key="filmfinder"
+            to="filmfinder"
+            className="font-medium text-gray-600 hover:text-secondary"
+          >
+            Filmfinder
+          </Link>
         </div>
 
-        <div
-          className={`px-4 rounded-tr-lg justify-self-end text-end border-r`}
-        >
+        <div className={`px-4 rounded-r-lg justify-self-end text-end border-r`}>
           <h4 className={`text-xl`}>
             <b>2020</b>
           </h4>
@@ -153,17 +151,19 @@ export const Projects = () => {
           </p>
         </div>
         <TimelineCenter
-          left={'bottom-0'}
+          left={'bottom-4'}
           right={'top-16'}
           rounded={'rounded-b-full'}
         />
         <div
-          className={`px-4 mt-8 rounded-lg border-l h-20 justify-self-start text-start`}
+          className={`px-4 mt-8 rounded-lg border-l h-26 justify-self-start text-start`}
         >
           <h4 className={`text-xl`}>
             <b>Skillworks AG</b>
           </h4>
           <p>
+            <small>Sept. 2022</small>
+            <br />
             Konstanz, Germany
             <br />
             <i
@@ -226,6 +226,42 @@ export const Projects = () => {
         <div></div>
         <TimelineCenter left={''} right={''} height={'h-4'} extra={'mb-2'} />
         <div></div>
+      </div>
+
+      <div className={'grid grid-cols-2 gap-8 pt-32 lg:m-4'}>
+        <div
+          className={`rounded-lg border h-fit text-start lg:p-8 flex items-center justify-evenly flex-wrap`}
+        >
+          <span className={'p-4'}>
+            <h3 className={`text-2xl text-primary`} id="filmfinder">
+              Filmfinder
+            </h3>
+            <span className={'block h-1 border-t w-28'}></span>
+            <p>
+              Group Project for App Development
+              <br />
+              <small>HTWG Konstanz</small>
+              <br />
+              <small>
+                <a
+                  href="https://github.com/filmfinder/filmfinder"
+                  className={'text-secondary'}
+                >
+                  GitHub
+                  <FontAwesomeIcon
+                    className={'px-1'}
+                    icon={faArrowUpRightFromSquare}
+                  />
+                </a>
+              </small>
+            </p>
+          </span>
+          <img
+            src="/assets/images/filmfinder_logo_high_res.png"
+            width={'150'}
+            alt="filmfinder"
+          ></img>
+        </div>
       </div>
     </section>
   );

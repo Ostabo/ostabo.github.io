@@ -17,3 +17,15 @@ a {
 .content ul {
   @apply my-6;
 }
+
+.timeline-cover {
+  width: 100%;
+  height: calc(100% - 4rem - 1rem);
+  background: linear-gradient(180deg, #f7f7f700 40%, #fff9 100%);;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
