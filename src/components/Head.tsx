@@ -2,6 +2,7 @@ import React, { Suspense, useState } from 'react';
 
 import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { Grid } from 'react-loader-spinner';
+import { Tooltip } from 'react-tooltip';
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
@@ -36,6 +37,8 @@ export const ThreeJsCanvas = () => (
     }
   >
     <Canvas
+      data-tooltip-id="head"
+      data-tooltip-content="Help! Idk how to make eyelids! 😭"
       camera={{
         fov: 75,
         near: 0.1,
@@ -56,5 +59,6 @@ export const ThreeJsCanvas = () => (
 
       <Head />
     </Canvas>
+    <Tooltip id="head" place={'bottom'} />
   </Suspense>
 );

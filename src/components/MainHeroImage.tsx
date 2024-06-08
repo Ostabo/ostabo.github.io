@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ThreeJsCanvas } from './Box';
+import { ThreeJsCanvas } from './Head';
 
 const MainHeroImage = () => {
   return (
