@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-scroll';
 import { Tooltip } from 'react-tooltip';
 
+import useResponsiveSize from '../hooks/useResponsiveSize';
+
 const TimelineCenter = ({
   left = 'top-1/2',
   right = 'top-1/2',
@@ -41,6 +43,7 @@ const TimelineCenter = ({
 );
 
 export const Projects = () => {
+  const { width } = useResponsiveSize();
   return (
     <section
       className={`bg-background p-8 w-full flex flex-col justify-content-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
@@ -61,8 +64,16 @@ export const Projects = () => {
       </h3>
       <div className={`grid grid-cols-3 py-16 border-b timeline`}>
         <div
-          className={`px-4 rounded-r-lg justify-self-end text-end border-r h-20`}
+          className={`px-4 rounded-r-lg justify-self-end text-end border-r h-20 relative`}
         >
+          {width > 658 ? (
+            <img
+              src={'/assets/images/htwg_logo.png'}
+              alt="htwg"
+              width="60"
+              className="absolute -right-16 top-5"
+            />
+          ) : null}
           <h4 className={`text-xl`}>
             <b>2024</b>
           </h4>
@@ -81,8 +92,16 @@ export const Projects = () => {
         </div>
         <TimelineCenter left={'top-4'} />
         <div
-          className={`px-4 rounded-l-lg border-l justify-self-start text-start`}
+          className={`px-4 rounded-l-lg border-l justify-self-start text-start relative`}
         >
+          {width > 658 ? (
+            <img
+              src={'/assets/images/skillworks_logo.png'}
+              alt="skillworks"
+              width="80"
+              className="absolute -translate-x-full -left-2"
+            />
+          ) : null}
           <h4 className={`text-xl`}>
             <b>Skillworks AG</b>
           </h4>
@@ -161,7 +180,17 @@ export const Projects = () => {
           </Link>
         </div>
 
-        <div className={`px-4 rounded-r-lg justify-self-end text-end border-r`}>
+        <div
+          className={`px-4 rounded-r-lg justify-self-end text-end border-r relative`}
+        >
+          {width > 658 ? (
+            <img
+              src={'/assets/images/htwg_logo.png'}
+              alt="htwg"
+              width="60"
+              className="absolute -right-16 top-12"
+            />
+          ) : null}
           <h4 className={`text-xl`}>
             <b>2020</b>
           </h4>
@@ -188,8 +217,16 @@ export const Projects = () => {
           rounded={'rounded-b-full'}
         />
         <div
-          className={`px-4 mt-8 rounded-lg border-l h-26 justify-self-start text-start`}
+          className={`px-4 mt-8 rounded-lg border-l h-26 justify-self-start text-start relative`}
         >
+          {width > 658 ? (
+            <img
+              src={'/assets/images/skillworks_logo.png'}
+              alt="skillworks"
+              width="80"
+              className="absolute -translate-x-full -left-2 top-10"
+            />
+          ) : null}
           <h4 className={`text-xl`}>
             <b>Skillworks AG</b>
           </h4>
@@ -224,7 +261,17 @@ export const Projects = () => {
         <TimelineCenter left={''} right={''} height={'h-4'} extra={'mb-2'} />
         <div></div>
 
-        <div className={`px-4 rounded-lg border-r justify-self-end text-end`}>
+        <div
+          className={`px-4 rounded-lg border-r justify-self-end text-end relative`}
+        >
+          {width > 658 ? (
+            <img
+              src={'/assets/images/bzm_logo.png'}
+              alt="bzm"
+              width="60"
+              className="absolute -translate-x-1/4 -right-20 top-2 -scale-75"
+            />
+          ) : null}
           <h4 className={`text-xl`}>
             <b>2019</b>
           </h4>
