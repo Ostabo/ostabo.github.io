@@ -3,10 +3,12 @@ import React, { useEffect, useState } from 'react';
 import TextTransition, { presets } from 'react-text-transition';
 
 import config from '../config/index.json';
+import useResponsiveSize from '../hooks/useResponsiveSize';
 
 const MainHero = () => {
   const { mainHero } = config;
   const partSubTitles = mainHero.subtitle.split(';');
+  const { width } = useResponsiveSize();
   const [counter, setCounter] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,11 +23,10 @@ const MainHero = () => {
           <span>{mainHero.title}</span>
           <br />
           <TextTransition
-            className={`block text-primary pb-10`}
-            inline={true}
-            style={{ whiteSpace: 'no-wrap' }}
+            className={`block text-primary min-h-24 max-w-full sm:justify-center lg:justify-start`}
+            inline={!(width < 650)}
             delay={1000}
-            springConfig={presets.slow}
+            springConfig={presets.wobbly}
           >
             {partSubTitles[counter]}
           </TextTransition>
