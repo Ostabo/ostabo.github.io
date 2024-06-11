@@ -62,7 +62,7 @@ export const Projects = () => {
         <br />
         <cite> - Stewart Brand</cite>
       </h3>
-      <div className={`grid grid-cols-3 py-16 border-b timeline`}>
+      <div className={`relative grid grid-cols-3 py-16 border-b timeline`}>
         <div
           className={`px-4 rounded-r-lg justify-self-end text-end border-r h-20 relative`}
         >
