@@ -40,7 +40,7 @@
     "items": [
       {
         "name": "angular",
-        "weight": 300
+        "weight": 120
       },
       {
         "name": "javascript",
@@ -60,7 +60,7 @@
       },
       {
         "name": "css3",
-        "weight": 300
+        "weight": 100
       },
       {
         "name": "java",
