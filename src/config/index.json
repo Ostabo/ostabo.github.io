@@ -261,6 +261,14 @@
       {
         "name": "firefox",
         "weight": 30
+      },
+      {
+        "name": "bash",
+        "weight": 20
+      },
+      {
+        "name": "materialui",
+        "weight": 40
       }
     ]
   }
