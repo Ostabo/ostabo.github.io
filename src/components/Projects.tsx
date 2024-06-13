@@ -127,6 +127,31 @@ export const Projects = () => {
         <div></div>
         <TimelineCenter left={''} right={''} height={'h-8'} extra={'my-2'} />
         <div></div>
+
+        <div></div>
+        <TimelineCenter
+          left={''}
+          right={'top-2'}
+          height={'h-12'}
+          extra={'mb-2'}
+          rounded={'rounded-full'}
+        />
+        <div
+          className={`px-4 rounded-lg h-6 border-l justify-self-start text-start`}
+        >
+          <Link
+            spy={true}
+            active="active"
+            smooth={true}
+            duration={1000}
+            key="pal-planner"
+            to="pal-planner"
+            className="font-medium text-gray-600 hover:text-secondary"
+          >
+            Pal Planner
+          </Link>
+        </div>
+
         <div></div>
         <TimelineCenter left={''} right={''} height={'h-4'} extra={'mb-2'} />
         <div></div>
@@ -155,8 +180,38 @@ export const Projects = () => {
         </div>
 
         <div></div>
-        <TimelineCenter left={''} right={''} height={'h-4'} extra={'my-2'} />
+        <TimelineCenter
+          left={''}
+          right={''}
+          height={'h-4'}
+          extra={'mt-2'}
+          rounded={'rounded-t-full'}
+        />
         <div></div>
+
+        <div></div>
+        <TimelineCenter
+          left={''}
+          right={'top-2'}
+          height={'h-12'}
+          extra={'mb-2'}
+          rounded={'rounded-b-full'}
+        />
+        <div
+          className={`px-4 rounded-lg h-6 border-l justify-self-start text-start`}
+        >
+          <Link
+            spy={true}
+            active="active"
+            smooth={true}
+            duration={1000}
+            key="necessities"
+            to="necessities"
+            className="font-medium text-gray-600 hover:text-secondary"
+          >
+            Necessities
+          </Link>
+        </div>
 
         <div></div>
         <TimelineCenter
@@ -330,7 +385,9 @@ export const Projects = () => {
               <></>
             )}
             <span
-              className={'p-4 self-start flex flex-col justify-stretch h-full'}
+              className={
+                'p-4 self-start flex flex-col justify-stretch h-full whitespace-pre-line'
+              }
             >
               <h3 className={`text-2xl text-primary`} id={project.id}>
                 {project.title}

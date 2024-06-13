@@ -70,8 +70,8 @@
           "href": "https://github.com/HexxagonHTWG/Hexxagon"
         },
         {
-          "text": "Gatling Reports",
-          "href": "https://hexxagonhtwg.github.io/Hexxagon/",
+          "text": "Live Demo",
+          "href": "https://ostabo.com/Hexxagon_UI/",
           "className": "ps-4"
         }
       ],
@@ -87,7 +87,7 @@
       "id": "necessities",
       "title": "Necessities",
       "type": "Flutter App",
-      "description": "Combines a few useful tools (e.g. calculator, weather, qr-scanner,etc.)",
+      "description": "Combines a few useful tools\n(e.g. calculator, weather, qr-scanner,etc.)",
       "small": "Side Project",
       "actions": [
         {
