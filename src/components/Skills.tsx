@@ -4,6 +4,7 @@ import { FastAverageColor, FastAverageColorResult } from 'fast-average-color';
 import { Tooltip } from 'react-tooltip';
 
 import config from '../config/index.json';
+import useResponsiveSize from '../hooks/useResponsiveSize';
 
 function addOpacity(hexColor: string) {
   // make colors opacity a bit brighter if lower than 0.2
@@ -84,14 +85,15 @@ export const Skills = () => {
   for (let i = 0; i < lines; i += 1) {
     distributedItems.push(normalDistributedItems.slice(i * 3, i * 3 + 3));
   }
+  const isSmall = useResponsiveSize().width < 470;
   return (
     <section
-      className={`bg-background p-8 w-full flex items-center justify-content-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
+      className={`bg-background p-8 w-full flex ${isSmall ? 'flex-wrap' : ''} items-center justify-content-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
       id="skills"
     >
       {distributedItems.map((items, ind) => (
         <div
-          className={`flex justify-evenly items-center flex-wrap gap-1 mx-auto`}
+          className={`flex justify-evenly items-center ${isSmall ? '' : 'flex-wrap'}  gap-1 mx-auto`}
           key={ind}
         >
           {items.map((item, i) => (
