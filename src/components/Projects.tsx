@@ -4,8 +4,9 @@ import { faAndroid } from '@fortawesome/free-brands-svg-icons';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-scroll';
-import { Tooltip } from 'react-tooltip';
+import { PlacesType, Tooltip } from 'react-tooltip';
 
+import config from '../config/index.json';
 import useResponsiveSize from '../hooks/useResponsiveSize';
 
 const TimelineCenter = ({
@@ -41,9 +42,9 @@ const TimelineCenter = ({
     ></div>
   </div>
 );
-
 export const Projects = () => {
   const { width } = useResponsiveSize();
+  const { projects } = config;
   return (
     <section
       className={`bg-background p-8 w-full flex flex-col justify-content-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
@@ -307,97 +308,78 @@ export const Projects = () => {
         <div></div>
       </div>
 
-      <div className={'flex flex-wrap gap-8 pt-16 lg:m-4 justify-evenly'}>
-        <div
-          className={`rounded-lg border h-fit text-start lg:p-8 flex items-center justify-evenly flex-wrap`}
-        >
-          <span className={'p-4'}>
-            <h3 className={`text-2xl text-primary`} id="filmfinder">
-              Filmfinder
-            </h3>
-            <span className={'block h-1 border-t w-28'}></span>
-            <p>
-              <i>Trailer Swipe App</i>
-              <br />
-              Group Project for App Development
-              <br />
-              <small>HTWG Konstanz</small>
-              <br />
-              <small>
-                <a
-                  href="https://github.com/filmfinder/filmfinder"
-                  className={'text-secondary'}
-                >
-                  GitHub
-                  <FontAwesomeIcon
-                    className={'px-1'}
-                    icon={faArrowUpRightFromSquare}
-                  />
-                </a>
-                <a
-                  href="/assets/filmfinder.apk"
-                  className={'text-secondary ps-4'}
-                  download="filmfinder.apk"
-                >
-                  Download APK
-                  <FontAwesomeIcon className={'px-1'} icon={faAndroid} />
-                </a>
-              </small>
-            </p>
-          </span>
-          <img
-            src="/assets/images/filmfinder_logo_high_res.png"
-            width={'150'}
-            alt="filmfinder"
-          ></img>
-        </div>
-
-        <div
-          className={`rounded-lg border h-fit text-start lg:p-8 flex items-center justify-evenly flex-wrap`}
-        >
-          <span className={'p-4'}>
-            <h3 className={`text-2xl text-primary`} id="hexxagon">
-              Hexxagon
-            </h3>
-            <span className={'block h-1 border-t w-28'}></span>
-            <p>
-              <i>Game</i> Group Project for
-              <br />
-              Software Engineering/Web Development
-              <br />
-              <small>HTWG Konstanz</small>
-              <br />
-              <small>
-                <a
-                  href="https://github.com/HexxagonHTWG/Hexxagon"
-                  className={'text-secondary'}
-                >
-                  GitHub
-                  <FontAwesomeIcon
-                    className={'px-1'}
-                    icon={faArrowUpRightFromSquare}
-                  />
-                </a>
-                <a
-                  href="https://hexxagonhtwg.github.io/Hexxagon/"
-                  className={'text-secondary ps-4'}
-                >
-                  Gatling Reports
-                  <FontAwesomeIcon
-                    className={'px-1'}
-                    icon={faArrowUpRightFromSquare}
-                  />
-                </a>
-              </small>
-            </p>
-          </span>
-          <img
-            src="/assets/images/hexxagon_logo.png"
-            width={'100'}
-            style={{ marginLeft: '25px', padding: '25px 0' }}
-            alt="hexxagon"
-          ></img>
-        </div>
+      <div className={'grid lg:grid-cols-2 gap-8 pt-16 lg:m-4 justify-evenly'}>
+        {projects?.map((project) => (
+          <div
+            key={project.id}
+            className={`rounded-lg border text-start text-balance p-8 grid lg:grid-flow-col-dense items-center justify-between justify-items-center relative`}
+          >
+            {project.tooltip ? (
+              <p
+                className={
+                  'absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 border rounded-full p-2 bg-background'
+                }
+                data-tooltip-id={project.tooltip.id}
+                data-tooltip-content={project.tooltip.content}
+                data-tooltip-place={project.tooltip.place as PlacesType}
+              >
+                ☠
+                <Tooltip id={project.tooltip.id} />
+              </p>
+            ) : (
+              <></>
+            )}
+            <span
+              className={'p-4 self-start flex flex-col justify-stretch h-full'}
+            >
+              <h3 className={`text-2xl text-primary`} id={project.id}>
+                {project.title}
+                <span className={'block h-1 border-t w-32'}></span>
+              </h3>
+              <p>
+                <i>{project.type}</i>
+                <br />
+                {project.description}
+                <br />
+                <small>{project.small}</small>
+                <br />
+                <small>
+                  {project.actions?.map(
+                    (action: {
+                      href: string;
+                      text: string;
+                      className?: string;
+                      download?: string;
+                    }) => (
+                      <a
+                        key={action.href}
+                        href={action.href}
+                        className={`text-secondary ${action.className}`}
+                        download={action.download}
+                      >
+                        {action.text}
+                        <FontAwesomeIcon
+                          className={'px-1'}
+                          icon={
+                            action.download
+                              ? faAndroid
+                              : faArrowUpRightFromSquare
+                          }
+                        />
+                      </a>
+                    ),
+                  )}
+                </small>
+              </p>
+            </span>
+            <img
+              src={project.img}
+              width={project.imgWidth}
+              style={project.style}
+              alt={project.alt}
+            ></img>
+          </div>
+        ))}
       </div>
     </section>
   );

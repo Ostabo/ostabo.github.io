@@ -35,6 +35,101 @@
       "github": "https://github.com/ostabo"
     }
   },
+  "projects": [
+    {
+      "id": "filmfinder",
+      "title": "Filmfinder",
+      "type": "Trailer Swipe App",
+      "description": "Group Project for App Development",
+      "small": "HTWG Konstanz",
+      "actions": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/filmfinder/filmfinder"
+        },
+        {
+          "text": "Download APK",
+          "href": "/assets/filmfinder.apk",
+          "className": "p-4",
+          "download": "filmfinder.apk"
+        }
+      ],
+      "img": "/assets/images/filmfinder_logo_high_res.png",
+      "imgWidth": "150",
+      "alt": "Filmfinder Logo"
+    },
+    {
+      "id": "hexxagon",
+      "title": "Hexxagon",
+      "type": "Game",
+      "description": "Group Project for Software Engineering/Web Development",
+      "small": "HTWG Konstanz",
+      "actions": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/HexxagonHTWG/Hexxagon"
+        },
+        {
+          "text": "Gatling Reports",
+          "href": "https://hexxagonhtwg.github.io/Hexxagon/",
+          "className": "ps-4"
+        }
+      ],
+      "img": "/assets/images/hexxagon_logo.png",
+      "imgWidth": "100",
+      "alt": "hexxagon",
+      "style": {
+        "padding": "25px 0",
+        "margin": "0 25px"
+      }
+    },
+    {
+      "id": "necessities",
+      "title": "Necessities",
+      "type": "Flutter App",
+      "description": "Combines a few useful tools (e.g. calculator, weather, qr-scanner,etc.)",
+      "small": "Side Project",
+      "actions": [
+        {
+          "text": "Live Demo (Not optimized for web)",
+          "href": "https://necessities.ostabo.software/"
+        }
+      ],
+      "img": "/assets/images/necessities_logo.png",
+      "imgWidth": "100",
+      "alt": "necessities",
+      "style": {
+        "padding": "25px 0",
+        "margin": "0 25px"
+      },
+      "tooltip": {
+        "id": "necessities-dead",
+        "content": "Another Dead Side Project 😢",
+        "place": "bottom-end",
+        "icon": "☠"
+      }
+    },
+    {
+      "id": "pal-planner",
+      "title": "Pal Planner",
+      "type": "Flutter App",
+      "description": "Find more time with your friends\nCalendar App",
+      "small": "Side Project",
+      "img": "/assets/images/pal_planner_logo.png",
+      "imgWidth": "100",
+      "alt": "pal planner",
+      "style": {
+        "padding": "25px 0",
+        "margin": "0 25px"
+      },
+      "tooltip": {
+        "id": "pal-planner-dead",
+        "content": "Another Dead Side Project 😢",
+        "place": "bottom-end",
+        "icon": "☠"
+      }
+    }
+  ],
   "skills": {
     "title": "Skillset & Experience",
     "items": [

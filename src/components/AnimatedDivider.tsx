@@ -106,7 +106,7 @@ export const AnimatedDivider = () => {
         ],
         zLayers: 1,
       }) as RecursivePartial<IOptions>,
-    [nodeCount],
+    [nodeCount, width],
   );
 
   if (init) {
