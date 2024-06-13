@@ -1,6 +1,10 @@
 import React, { Fragment } from 'react';
 
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars,
+  faPaperPlane,
+  faXmark,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   Popover,
@@ -8,7 +12,6 @@ import {
   PopoverPanel,
   Transition,
 } from '@headlessui/react';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-scroll';
 
 import config from '../config/index.json';
@@ -44,7 +47,11 @@ const Menu = () => {
                     className={`bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
                   >
                     <span className="sr-only">Open main menu</span>
-                    <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                    <FontAwesomeIcon
+                      icon={faBars}
+                      className="h-6 w-6"
+                      aria-hidden={true}
+                    ></FontAwesomeIcon>
                   </PopoverButton>
                 </div>
               </div>
@@ -96,7 +103,11 @@ const Menu = () => {
                       className={`bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
                     >
                       <span className="sr-only">Close main menu</span>
-                      <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                      <FontAwesomeIcon
+                        icon={faXmark}
+                        className="h-6 w-6"
+                        aria-hidden={true}
+                      ></FontAwesomeIcon>
                     </PopoverButton>
                   </div>
                 </div>

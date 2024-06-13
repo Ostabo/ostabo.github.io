@@ -4,8 +4,10 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faAndroid } from '@fortawesome/free-brands-svg-icons';
 import {
   faArrowUpRightFromSquare,
+  faBars,
   faCookieBite,
   faPaperPlane,
+  faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import Head from 'next/head';
 
@@ -22,6 +24,8 @@ library.add(faPaperPlane);
 library.add(faCookieBite);
 library.add(faArrowUpRightFromSquare);
 library.add(faAndroid);
+library.add(faBars);
+library.add(faXmark);
 
 const App = () => {
   return (
