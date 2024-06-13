@@ -28,7 +28,9 @@ const App = () => {
     <>
       <Head>
         <title>Ostabo Developer Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <noscript>You need to enable JavaScript to see this page.</noscript>
       <div className={`bg-background grid gap-y-16 overflow-hidden`}>
         <LazyShow>
           <div className={`relative bg-background`}>

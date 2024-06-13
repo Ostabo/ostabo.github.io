@@ -7,7 +7,7 @@
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "138x138",
       "type": "image/x-icon"
     },
     {
@@ -24,5 +24,20 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#474fec",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "screenshots": [
+    {
+      "src": "/assets/images/screen_wide.png",
+      "sizes": "1550x804",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Ostabo Dev Page"
+    },
+    {
+      "src": "/assets/images/screen_long.png",
+      "sizes": "397x859",
+      "type": "image/png",
+      "label": "Ostabo Dev Page"
+    }
+  ]
 }
