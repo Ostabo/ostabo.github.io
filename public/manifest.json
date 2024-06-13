@@ -1,6 +1,9 @@
 {
   "short_name": "Ostabo",
   "name": "Ostabo - Developer Page",
+  "description": "Developer Page - Oskar Borkenhagen - Ostabo - Software Engineer",
+  "author": "Oskar Borkenhagen",
+  "keywords": ["Ostabo", "Developer", "GitHub", "GitHub Pages", "Ostabo GitHub", "Software Engineer", "Oskar Borkenhagen", "Ostabo Developer", "Ostabo Software Engineer", "Ostabo Oskar Borkenhagen", "Ostabo Developer Page", "Ostabo Software Engineer Page", "Ostabo Oskar Borkenhagen Page"],
   "icons": [
     {
       "src": "favicon.ico",

@@ -12,4 +12,5 @@ module.exports = withBundleAnalyzer({
   },
   reactStrictMode: true,
   output: 'export',
+  productionBrowserSourceMaps: true,
 });

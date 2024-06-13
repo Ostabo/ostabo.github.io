@@ -38,7 +38,7 @@ export const ThreeJsCanvas = () => (
   >
     <Canvas
       data-tooltip-id="head"
-      data-tooltip-content="Help! Idk how to make eyelids! 😭"
+      data-tooltip-content="Help! That doesn't look like me 😭"
       camera={{
         fov: 75,
         near: 0.1,
@@ -49,7 +49,7 @@ export const ThreeJsCanvas = () => (
     >
       <ambientLight intensity={Math.PI / 2} />
       <spotLight
-        position={[5, 5, 5]}
+        position={[1, 4, 5]}
         angle={0.15}
         penumbra={1}
         decay={0}
