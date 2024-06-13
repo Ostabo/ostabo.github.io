@@ -4,6 +4,8 @@ import { IOptions, RecursivePartial } from '@tsparticles/engine';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 
+import useResponsiveSize from '../hooks/useResponsiveSize';
+
 export const AnimatedDivider = () => {
   const [init, setInit] = useState(false);
 
@@ -18,6 +20,7 @@ export const AnimatedDivider = () => {
       setInit(true);
     });
   }, []);
+  const { width } = useResponsiveSize();
   const nodeCount = typeof window !== 'undefined' ? window.innerWidth / 50 : 20;
   const options = useMemo(
     () =>
@@ -66,8 +69,41 @@ export const AnimatedDivider = () => {
           size: {
             value: { min: 1, max: 5 },
           },
+          reduceDuplicates: true,
         },
         detectRetina: true,
+        manualParticles: [
+          {
+            position: { x: 0, y: 50, mode: 'percent' },
+            options: {
+              move: {
+                speed: 0,
+              },
+              links: {
+                color: '#2c70a1',
+                distance: width / 4,
+                enable: true,
+                opacity: 0.25,
+                width: 1,
+              },
+            },
+          },
+          {
+            position: { x: 100, y: 50, mode: 'percent' },
+            options: {
+              move: {
+                speed: 0,
+              },
+              links: {
+                color: '#2c70a1',
+                distance: width / 4,
+                enable: true,
+                opacity: 0.25,
+                width: 1,
+              },
+            },
+          },
+        ],
         zLayers: 1,
       }) as RecursivePartial<IOptions>,
     [nodeCount],
