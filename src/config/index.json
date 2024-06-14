@@ -72,7 +72,7 @@
         {
           "text": "Live Demo",
           "href": "https://ostabo.com/Hexxagon_UI/",
-          "className": "ps-4"
+          "className": "p-4"
         }
       ],
       "img": "/assets/images/hexxagon_logo.png",

@@ -372,7 +372,7 @@ export const Projects = () => {
             {project.tooltip ? (
               <p
                 className={
-                  'absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 border rounded-full p-2 bg-background'
+                  'absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 border rounded-full p-2 bg-background aspect-square h-12 flex items-center justify-center text-lg'
                 }
                 data-tooltip-id={project.tooltip.id}
                 data-tooltip-content={project.tooltip.content}
