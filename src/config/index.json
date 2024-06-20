@@ -23,8 +23,7 @@
   },
   "mainHero": {
     "title": "SOMETIMES THE PRODUCT IS",
-    "subtitle": "YOU;ME;OSTABO;OSKAR BORKENHAGEN",
-    "img": "/assets/images/oskar.png",
+    "subtitle": "ME;OSKAR BORKENHAGEN;OSTABO",
     "primaryAction": {
       "text": "Skillset",
       "href": "skills"
