@@ -1,10 +1,7 @@
 import React from 'react';
 
 import { faAndroid } from '@fortawesome/free-brands-svg-icons';
-import {
-  faArrowUpRightFromSquare,
-  faLink,
-} from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-scroll';
 import { PlacesType, Tooltip } from 'react-tooltip';
@@ -85,9 +82,8 @@ export const Projects = () => {
             duration={1000}
             key="image-converter"
             to="image-converter"
-            className="font-medium text-gray-600 hover:text-secondary"
+            className="font-medium text-gray-600 hover:text-secondary text-nowrap underline underline-offset-2"
           >
-            <FontAwesomeIcon icon={faLink} className={'me-2'} />
             Image Converter
           </Link>
         </div>
@@ -174,9 +170,8 @@ export const Projects = () => {
             duration={1000}
             key="pal-planner"
             to="pal-planner"
-            className="font-medium text-gray-600 hover:text-secondary"
+            className="font-medium text-gray-600 hover:text-secondary text-nowrap underline underline-offset-2"
           >
-            <FontAwesomeIcon icon={faLink} className={'me-2'} />
             Pal Planner
           </Link>
         </div>
@@ -202,9 +197,8 @@ export const Projects = () => {
             duration={1000}
             key="filmfinder"
             to="filmfinder"
-            className="font-medium text-gray-600 hover:text-secondary"
+            className="font-medium text-gray-600 hover:text-secondary text-nowrap underline underline-offset-2"
           >
-            <FontAwesomeIcon icon={faLink} className={'me-2'} />
             Filmfinder
           </Link>
         </div>
@@ -237,9 +231,8 @@ export const Projects = () => {
             duration={1000}
             key="necessities"
             to="necessities"
-            className="font-medium text-gray-600 hover:text-secondary"
+            className="font-medium text-gray-500 hover:text-secondary text-nowrap underline underline-offset-2"
           >
-            <FontAwesomeIcon icon={faLink} className={'me-2'} />
             Necessities
           </Link>
         </div>
@@ -261,9 +254,8 @@ export const Projects = () => {
             duration={1000}
             key="hexxagon"
             to="hexxagon"
-            className="font-medium text-gray-600 hover:text-secondary"
+            className="font-medium text-gray-600 hover:text-secondary text-nowrap underline underline-offset-2"
           >
-            <FontAwesomeIcon icon={faLink} className={'me-2'} />
             Hexxagon
           </Link>
         </div>
