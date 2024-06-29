@@ -6,6 +6,7 @@ import {
   faArrowUpRightFromSquare,
   faBars,
   faCookieBite,
+  faLink,
   faPaperPlane,
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
@@ -20,12 +21,15 @@ import MainHeroImage from '../components/MainHeroImage';
 import { Projects } from '../components/Projects';
 import { Skills } from '../components/Skills';
 
-library.add(faPaperPlane);
-library.add(faCookieBite);
-library.add(faArrowUpRightFromSquare);
-library.add(faAndroid);
-library.add(faBars);
-library.add(faXmark);
+library.add(
+  faPaperPlane,
+  faCookieBite,
+  faArrowUpRightFromSquare,
+  faAndroid,
+  faBars,
+  faXmark,
+  faLink,
+);
 
 const App = () => {
   return (

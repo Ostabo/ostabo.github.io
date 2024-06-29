@@ -1,7 +1,10 @@
 import React from 'react';
 
 import { faAndroid } from '@fortawesome/free-brands-svg-icons';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowUpRightFromSquare,
+  faLink,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-scroll';
 import { PlacesType, Tooltip } from 'react-tooltip';
@@ -63,7 +66,32 @@ export const Projects = () => {
         <br />
         <cite> - Stewart Brand</cite>
       </h3>
+
       <div className={`relative grid grid-cols-3 py-16 border-b timeline`}>
+        <div></div>
+        <TimelineCenter
+          left={''}
+          right={'top-4'}
+          height={'h-8'}
+          extra={'my-2'}
+        />
+        <div
+          className={`px-4 rounded-lg h-6 mt-2 border-l justify-self-start text-start`}
+        >
+          <Link
+            spy={true}
+            active="active"
+            smooth={true}
+            duration={1000}
+            key="image-converter"
+            to="image-converter"
+            className="font-medium text-gray-600 hover:text-secondary"
+          >
+            <FontAwesomeIcon icon={faLink} className={'me-2'} />
+            Image Converter
+          </Link>
+        </div>
+
         <div
           className={`px-4 rounded-r-lg justify-self-end text-end border-r h-20 relative`}
         >
@@ -148,6 +176,7 @@ export const Projects = () => {
             to="pal-planner"
             className="font-medium text-gray-600 hover:text-secondary"
           >
+            <FontAwesomeIcon icon={faLink} className={'me-2'} />
             Pal Planner
           </Link>
         </div>
@@ -175,6 +204,7 @@ export const Projects = () => {
             to="filmfinder"
             className="font-medium text-gray-600 hover:text-secondary"
           >
+            <FontAwesomeIcon icon={faLink} className={'me-2'} />
             Filmfinder
           </Link>
         </div>
@@ -209,6 +239,7 @@ export const Projects = () => {
             to="necessities"
             className="font-medium text-gray-600 hover:text-secondary"
           >
+            <FontAwesomeIcon icon={faLink} className={'me-2'} />
             Necessities
           </Link>
         </div>
@@ -232,6 +263,7 @@ export const Projects = () => {
             to="hexxagon"
             className="font-medium text-gray-600 hover:text-secondary"
           >
+            <FontAwesomeIcon icon={faLink} className={'me-2'} />
             Hexxagon
           </Link>
         </div>
