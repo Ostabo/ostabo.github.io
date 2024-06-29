@@ -88,12 +88,12 @@ export const Skills = () => {
   const isSmall = useResponsiveSize().width < 470;
   return (
     <section
-      className={`bg-background p-8 w-full flex ${isSmall ? 'flex-wrap' : ''} items-center justify-content-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
+      className={`bg-background p-8 w-full flex ${isSmall ? 'flex-col' : ''} items-center justify-content-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
       id="skills"
     >
       {distributedItems.map((items, ind) => (
         <div
-          className={`flex justify-evenly items-center ${isSmall ? '' : 'flex-wrap'}  gap-1 mx-auto`}
+          className={`flex justify-evenly items-center ${isSmall ? '' : 'flex-wrap'} gap-1 mx-auto`}
           key={ind}
         >
           {items.map((item, i) => (
