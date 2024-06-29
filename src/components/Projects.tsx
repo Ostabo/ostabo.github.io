@@ -413,9 +413,11 @@ export const Projects = () => {
                 'p-4 self-start flex flex-col justify-stretch h-full whitespace-pre-line'
               }
             >
-              <h3 className={`text-2xl text-primary`} id={project.id}>
+              <h3
+                className={`text-2xl text-primary underline underline-offset-8 pb-2 decoration-gray-300`}
+                id={project.id}
+              >
                 {project.title}
-                <span className={'block h-1 border-t w-32'}></span>
               </h3>
               <p>
                 <i>{project.type}</i>
