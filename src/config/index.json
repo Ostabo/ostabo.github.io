@@ -36,6 +36,26 @@
   },
   "projects": [
     {
+      "id": "image-converter",
+      "title": "Minimalist Image Converter",
+      "type": "Simple Next App",
+      "description": "A very minimalist image converter - png/jpg/webp",
+      "small": "Side Project",
+      "actions": [
+        {
+          "text": "Live",
+          "href": "https://image-converter.ostabo.com/"
+        }
+      ],
+      "img": "/assets/images/img_converter_logo.png",
+      "imgWidth": "125",
+      "alt": "Minimalist Image Converter Logo",
+      "style": {
+        "padding": "25px 0",
+        "margin": "0 25px"
+      }
+    },
+    {
       "id": "filmfinder",
       "title": "Filmfinder",
       "type": "Trailer Swipe App",
@@ -75,7 +95,7 @@
         }
       ],
       "img": "/assets/images/hexxagon_logo.png",
-      "imgWidth": "100",
+      "imgWidth": "125",
       "alt": "hexxagon",
       "style": {
         "padding": "25px 0",
@@ -95,7 +115,7 @@
         }
       ],
       "img": "/assets/images/necessities_logo.png",
-      "imgWidth": "100",
+      "imgWidth": "125",
       "alt": "necessities",
       "style": {
         "padding": "25px 0",
@@ -115,7 +135,7 @@
       "description": "Find more time with your friends\nCalendar App",
       "small": "Side Project",
       "img": "/assets/images/pal_planner_logo.png",
-      "imgWidth": "100",
+      "imgWidth": "125",
       "alt": "pal planner",
       "style": {
         "padding": "25px 0",
