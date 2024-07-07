@@ -64,11 +64,7 @@ const App = () => {
           </>
         </LazyShow>
         <AnimatedDivider></AnimatedDivider>
-        <LazyShow>
-          <>
-            <Projects />
-          </>
-        </LazyShow>
+        <Projects />
         <AnimatedDivider></AnimatedDivider>
         <LazyShow>
           <>

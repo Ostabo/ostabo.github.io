@@ -16,6 +16,7 @@ function useOnScreen(
       },
       {
         rootMargin,
+        threshold: 0.5,
       },
     );
     if (ref && ref?.current) {
