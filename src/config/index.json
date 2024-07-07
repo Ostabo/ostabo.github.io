@@ -56,6 +56,26 @@
       }
     },
     {
+      "id": "pal-planner",
+      "title": "Pal Planner",
+      "type": "Flutter App",
+      "description": "Find more time with your friends\nCalendar App",
+      "small": "Side Project",
+      "img": "/assets/images/pal_planner_logo.png",
+      "imgWidth": "125",
+      "alt": "pal planner",
+      "style": {
+        "padding": "25px 0",
+        "margin": "0 25px"
+      },
+      "tooltip": {
+        "id": "pal-planner-dead",
+        "content": "Another Dead Side Project 😢",
+        "place": "bottom-end",
+        "icon": "☠"
+      }
+    },
+    {
       "id": "filmfinder",
       "title": "Filmfinder",
       "type": "Trailer Swipe App",
@@ -76,31 +96,6 @@
       "img": "/assets/images/filmfinder_logo_high_res.png",
       "imgWidth": "150",
       "alt": "Filmfinder Logo"
-    },
-    {
-      "id": "hexxagon",
-      "title": "Hexxagon",
-      "type": "Game",
-      "description": "Group Project for Software Engineering/Web Development",
-      "small": "HTWG Konstanz",
-      "actions": [
-        {
-          "text": "GitHub",
-          "href": "https://github.com/HexxagonHTWG/Hexxagon"
-        },
-        {
-          "text": "Live Demo",
-          "href": "https://ostabo.com/Hexxagon_UI/",
-          "className": "p-4"
-        }
-      ],
-      "img": "/assets/images/hexxagon_logo.png",
-      "imgWidth": "125",
-      "alt": "hexxagon",
-      "style": {
-        "padding": "25px 0",
-        "margin": "0 25px"
-      }
     },
     {
       "id": "necessities",
@@ -129,23 +124,34 @@
       }
     },
     {
-      "id": "pal-planner",
-      "title": "Pal Planner",
-      "type": "Flutter App",
-      "description": "Find more time with your friends\nCalendar App",
-      "small": "Side Project",
-      "img": "/assets/images/pal_planner_logo.png",
+      "id": "hexxagon",
+      "title": "Hexxagon",
+      "type": "Game",
+      "description": "Group Project for Software Engineering/Web Development",
+      "small": "HTWG Konstanz",
+      "actions": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/HexxagonHTWG/Hexxagon"
+        },
+        {
+          "text": "Live Demo",
+          "href": "https://ostabo.com/Hexxagon_UI/",
+          "className": "p-4"
+        }
+      ],
+      "img": "/assets/images/hexxagon_logo.png",
       "imgWidth": "125",
-      "alt": "pal planner",
+      "alt": "hexxagon",
       "style": {
         "padding": "25px 0",
         "margin": "0 25px"
       },
       "tooltip": {
-        "id": "pal-planner-dead",
-        "content": "Another Dead Side Project 😢",
+        "id": "hexxagon-love",
+        "content": "Hexagons are the bestagons ❤️",
         "place": "bottom-end",
-        "icon": "☠"
+        "icon": "❤️"
       }
     }
   ],

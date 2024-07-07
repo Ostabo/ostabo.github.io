@@ -402,7 +402,7 @@ export const Projects = () => {
                 data-tooltip-content={project.tooltip.content}
                 data-tooltip-place={project.tooltip.place as PlacesType}
               >
-                ☠
+                {project.tooltip.icon}
                 <Tooltip id={project.tooltip.id} />
               </p>
             ) : (
