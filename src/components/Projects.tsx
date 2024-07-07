@@ -108,7 +108,7 @@ export const Projects = () => {
               <h4 className={`text-xl`}>
                 <b>2024</b>
               </h4>
-              <p>
+              <span>
                 Bachelor of Science in
                 <br />
                 <i
@@ -119,7 +119,7 @@ export const Projects = () => {
                   Angewandte Informatik
                   <Tooltip id="CS" className={'z-10'} />
                 </i>
-              </p>
+              </span>
             </div>
             <TimelineCenter left={'top-4'} />
             <div
@@ -136,7 +136,7 @@ export const Projects = () => {
               <h4 className={`text-xl`}>
                 <b>Skillworks AG</b>
               </h4>
-              <p>
+              <span>
                 <small>Apr. 2024</small>
                 <br />
                 Konstanz, Germany
@@ -151,7 +151,7 @@ export const Projects = () => {
                   Bachelor Thesis
                   <Tooltip id="skillworks-bachelor" className={'z-10'} />
                 </i>
-              </p>
+              </span>
             </div>
 
             <div></div>
@@ -290,7 +290,7 @@ export const Projects = () => {
               <h4 className={`text-xl`}>
                 <b>2020</b>
               </h4>
-              <p>
+              <span>
                 <small>Beginning of studies at</small>
                 <br />
                 <b>HTWG Konstanz</b>
@@ -305,7 +305,7 @@ export const Projects = () => {
                   Angewandte Informatik
                   <Tooltip id="CS" className={'z-10'} />
                 </i>
-              </p>
+              </span>
             </div>
             <TimelineCenter
               left={'bottom-4'}
@@ -326,7 +326,7 @@ export const Projects = () => {
               <h4 className={`text-xl`}>
                 <b>Skillworks AG</b>
               </h4>
-              <p>
+              <span>
                 <small>Sept. 2022</small>
                 <br />
                 Konstanz, Germany
@@ -341,7 +341,7 @@ export const Projects = () => {
                   Working Student
                   <Tooltip id="skillworks-working" className={'z-10'} />
                 </i>
-              </p>
+              </span>
             </div>
 
             <div></div>
@@ -391,11 +391,11 @@ export const Projects = () => {
               <h4 className={`text-xl`}>
                 <b>2019</b>
               </h4>
-              <p>
+              <span>
                 <i>Abitur</i>
                 <br />
                 Gymnasium - Markdorf, Germany
-              </p>
+              </span>
             </div>
             <TimelineCenter left="bottom-1/4" right="top-1/4" height={'h-24'} />
             <div
@@ -404,9 +404,9 @@ export const Projects = () => {
               <h4 className={`text-sm`}>
                 <b>Lidl Vertriebs - GmbH & Co.KG</b>
               </h4>
-              <p>
+              <span>
                 <small>Cashier</small>
-              </p>
+              </span>
             </div>
 
             <div></div>
@@ -444,88 +444,86 @@ export const Projects = () => {
           </div>
         </>
       </LazyShow>
-      <LazyShow>
-        <>
-          <div
-            className={'grid lg:grid-cols-2 gap-8 pt-16 lg:m-4 justify-evenly'}
-          >
-            {projects?.map((project) => (
-              <div
-                key={project.id}
-                className={`rounded-lg border text-start text-balance p-8 grid lg:grid-flow-col-dense items-center justify-between justify-items-center relative`}
-              >
-                {project.tooltip ? (
-                  <p
-                    className={
-                      'absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 border rounded-full p-2 bg-background aspect-square h-12 flex items-center justify-center text-lg'
-                    }
-                    data-tooltip-id={project.tooltip.id}
-                    data-tooltip-content={project.tooltip.content}
-                    data-tooltip-place={project.tooltip.place as PlacesType}
-                  >
-                    {project.tooltip.icon}
-                    <Tooltip id={project.tooltip.id} className={'z-10'} />
-                  </p>
-                ) : (
-                  <></>
-                )}
+      <LazyShow threshold={0.3}>
+        <div
+          className={'grid lg:grid-cols-2 gap-8 pt-16 lg:m-4 justify-evenly'}
+        >
+          {projects?.map((project) => (
+            <div
+              key={project.id}
+              className={`rounded-lg border text-start text-balance p-8 grid lg:grid-flow-col-dense items-center justify-between justify-items-center relative`}
+            >
+              {project.tooltip ? (
                 <span
                   className={
-                    'p-4 self-start flex flex-col justify-stretch h-full whitespace-pre-line'
+                    'absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 border rounded-full p-2 bg-background aspect-square h-12 flex items-center justify-center text-lg'
                   }
+                  data-tooltip-id={project.tooltip.id}
+                  data-tooltip-content={project.tooltip.content}
+                  data-tooltip-place={project.tooltip.place as PlacesType}
                 >
-                  <h3
-                    className={`text-2xl text-primary underline underline-offset-8 pb-2 decoration-gray-300`}
-                    id={project.id}
-                  >
-                    {project.title}
-                  </h3>
-                  <p>
-                    <i>{project.type}</i>
-                    <br />
-                    {project.description}
-                    <br />
-                    <small>{project.small}</small>
-                    <br />
-                    <small>
-                      {project.actions?.map(
-                        (action: {
-                          href: string;
-                          text: string;
-                          className?: string;
-                          download?: string;
-                        }) => (
-                          <a
-                            key={action.href}
-                            href={action.href}
-                            className={`text-secondary ${action.className}`}
-                            download={action.download}
-                          >
-                            {action.text}
-                            <FontAwesomeIcon
-                              className={'px-1'}
-                              icon={
-                                action.download
-                                  ? faAndroid
-                                  : faArrowUpRightFromSquare
-                              }
-                            />
-                          </a>
-                        ),
-                      )}
-                    </small>
-                  </p>
+                  {project.tooltip.icon}
+                  <Tooltip id={project.tooltip.id} className={'z-10'} />
                 </span>
-                <img
-                  src={project.img}
-                  width={project.imgWidth}
-                  style={project.style}
-                  alt={project.alt}
-                ></img>
-              </div>
-            ))}
-          </div>
-        </>
+              ) : (
+                <></>
+              )}
+              <span
+                className={
+                  'p-4 self-start flex flex-col justify-stretch h-full whitespace-pre-line'
+                }
+              >
+                <h3
+                  className={`text-2xl text-primary underline underline-offset-8 pb-2 decoration-gray-300`}
+                  id={project.id}
+                >
+                  {project.title}
+                </h3>
+                <span>
+                  <i>{project.type}</i>
+                  <br />
+                  {project.description}
+                  <br />
+                  <small>{project.small}</small>
+                  <br />
+                  <small>
+                    {project.actions?.map(
+                      (action: {
+                        href: string;
+                        text: string;
+                        className?: string;
+                        download?: string;
+                      }) => (
+                        <a
+                          key={action.href}
+                          href={action.href}
+                          className={`text-secondary ${action.className}`}
+                          download={action.download}
+                        >
+                          {action.text}
+                          <FontAwesomeIcon
+                            className={'px-1'}
+                            icon={
+                              action.download
+                                ? faAndroid
+                                : faArrowUpRightFromSquare
+                            }
+                          />
+                        </a>
+                      ),
+                    )}
+                  </small>
+                </span>
+              </span>
+              <img
+                src={project.img}
+                width={project.imgWidth}
+                style={project.style}
+                alt={project.alt}
+              ></img>
+            </div>
+          ))}
+        </div>
       </LazyShow>
     </section>
   );

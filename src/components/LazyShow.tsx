@@ -5,6 +5,7 @@ import { motion, useAnimation } from 'framer-motion';
 function useOnScreen(
   ref: MutableRefObject<HTMLDivElement | null>,
   rootMargin = '0px',
+  threshold = 0.5,
 ) {
   const [isIntersecting, setIntersecting] = useState(false);
 
@@ -16,7 +17,7 @@ function useOnScreen(
       },
       {
         rootMargin,
-        threshold: 0.5,
+        threshold,
       },
     );
     if (ref && ref?.current) {
@@ -26,15 +27,21 @@ function useOnScreen(
     return () => {
       observer.unobserve(currentRef);
     };
-  }, [ref, rootMargin]); // Empty array ensures that effect is only run on mount and unmount
+  }, [ref, rootMargin, threshold]); // Empty array ensures that effect is only run on mount and unmount
 
   return isIntersecting;
 }
 
-const LazyShow = ({ children }: { children: React.ReactElement }) => {
+const LazyShow = ({
+  children,
+  threshold,
+}: {
+  children: React.ReactElement;
+  threshold?: number;
+}) => {
   const controls = useAnimation();
   const rootRef = useRef<HTMLDivElement>(null);
-  const onScreen = useOnScreen(rootRef);
+  const onScreen = useOnScreen(rootRef, '0px', threshold);
   useEffect(() => {
     if (onScreen) {
       controls.start({
