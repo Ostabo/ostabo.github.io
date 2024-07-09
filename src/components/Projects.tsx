@@ -444,7 +444,7 @@ export const Projects = () => {
           </div>
         </>
       </LazyShow>
-      <LazyShow threshold={0.3}>
+      <LazyShow threshold={0.2}>
         <div
           className={'grid lg:grid-cols-2 gap-8 pt-16 lg:m-4 justify-evenly'}
         >
