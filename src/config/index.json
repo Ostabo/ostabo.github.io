@@ -181,11 +181,11 @@
       },
       {
         "name": "css3",
-        "weight": 100
+        "weight": 80
       },
       {
         "name": "java",
-        "weight": 80
+        "weight": 100
       },
       {
         "name": "spring",
