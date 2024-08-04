@@ -58,9 +58,7 @@ const App = () => {
           </div>
         </LazyShow>
         <AnimatedDivider></AnimatedDivider>
-        <LazyShow threshold={0.2}>
-          <Skills />
-        </LazyShow>
+        <Skills />
         <AnimatedDivider></AnimatedDivider>
         <Projects />
         <AnimatedDivider></AnimatedDivider>
