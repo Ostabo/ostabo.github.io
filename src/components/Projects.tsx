@@ -383,7 +383,7 @@ export const Projects = () => {
                 src={'/assets/images/bzm_logo.png'}
                 alt="bzm"
                 width="60"
-                className="absolute -translate-x-1/4 -right-20 top-2 -scale-75"
+                className="absolute -translate-x-1/4 -right-20 top-8 -scale-75"
               />
             ) : null}
             <h4 className={`text-xl`}>
@@ -392,10 +392,11 @@ export const Projects = () => {
             <span>
               <i>Abitur</i>
               <br />
-              Gymnasium - Markdorf, Germany
+              Markdorf, Germany <br />
+              Gymnasium
             </span>
           </div>
-          <TimelineCenter left="bottom-1/4" right="top-1/4" height={'h-24'} />
+          <TimelineCenter left="bottom-1/4" right="top-1/4" height={'h-32'} />
           <div
             className={`px-4 rounded-lg border-l h-12 justify-self-start text-start`}
           >
