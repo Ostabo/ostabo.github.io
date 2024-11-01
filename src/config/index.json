@@ -360,7 +360,7 @@
         "weight": 30
       },
       {
-        "name": "ssh",
+        "name": "cloudflare",
         "weight": 20
       },
       {
