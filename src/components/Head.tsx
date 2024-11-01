@@ -10,7 +10,7 @@ export function Head() {
   const draco = new DRACOLoader();
   draco.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
 
-  const model = useLoader(GLTFLoader, '/assets/blender/head.glb', (loader) => {
+  const model = useLoader(GLTFLoader, '/assets/blender/head2.glb', (loader) => {
     loader.setDRACOLoader(draco);
   });
   const [goingRight, setGoingRight] = useState(true);
