@@ -19,7 +19,7 @@ export const DarkModeToggle = () => {
   }, []);
   const inital = window.localStorage.getItem('nightwind-mode');
   const [darkMode, setDarkMode] = useState<boolean>(
-    (inital != null && inital == 'dark') ||
+    (inital != null && inital === 'dark') ||
       (inital == null && nightwind.checkNightMode()),
   );
   useEffect(() => {
