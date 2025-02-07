@@ -7,6 +7,9 @@ html {
     overflow-x: clip;
 
     &.dark {
+        & a:has(svg):not(.main-divider) {
+            fill: white;
+        }
         & svg.main-divider {
             fill: black;
         }
