@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'jit',
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'media',
+  darkMode: 'class',
   theme: {
     fontSize: {
       xs: '0.75rem',
@@ -15,13 +15,29 @@ module.exports = {
       '5xl': '3rem',
       '6xl': '4rem',
     },
+    nightwind: {
+      colorClasses: [
+        'gradient',
+        'ring',
+        'ring-offset',
+        'divide',
+        'placeholder',
+      ],
+    },
     extend: {
       colors: {
-        primary: '#474fec',
-        secondary: '#2c70a1',
-        tertiary: '#99a0a3',
-        border: '#261a35',
-        background: '#ffffff',
+        primary: {
+          50: '#c8e5fc',
+          300: '#8e93e8',
+          600: '#474fec',
+          900: '#03045e',
+        },
+        background: {
+          50: '#ffffff',
+          300: '#c3c3c3',
+          600: '#393939',
+          900: '#000000',
+        },
       },
       animation: {
         vote: 'vote 1s ease-in-out',
@@ -42,5 +58,6 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [],
+  // eslint-disable-next-line global-require
+  plugins: [require('nightwind')],
 };

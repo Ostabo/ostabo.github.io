@@ -29,7 +29,7 @@ const MainHero = () => {
           <span>{mainHero.title}</span>
           <br />
           <TextTransition
-            className={`block text-primary min-h-24 max-w-full sm:justify-center lg:justify-start`}
+            className={`block text-primary-600 min-h-24 max-w-full sm:justify-center lg:justify-start`}
             inline={!(width < 650)}
             delay={1000}
             springConfig={presets.wobbly}

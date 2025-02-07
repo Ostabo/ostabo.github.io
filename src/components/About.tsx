@@ -10,11 +10,11 @@ const About = () => {
   return (
     <div
       id="about"
-      className="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-2"
+      className="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 py-2 text-background-900"
     >
       <div className="flex flex-col items-center justify-center">
         <div>
-          <img src={logo} alt={companyName} className="w-12 h-12 m-6" />
+          <img src={logo} alt={companyName} className="w-12 h-12 m-6 logo" />
         </div>
         {socialMedia ? (
           <span
@@ -25,13 +25,12 @@ const About = () => {
             {socialMedia?.github ? (
               <a
                 aria-label="github"
-                className="flex flex-col items-center hover:text-primary"
+                className="flex flex-col items-center hover:text-primary-300"
                 href={socialMedia.github}
                 target="_blank"
                 rel="noreferrer"
               >
                 <svg
-                  className="fill-current"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -45,13 +44,12 @@ const About = () => {
             {socialMedia?.linkedIn ? (
               <a
                 aria-label="linkedIn"
-                className="flex flex-col items-center hover:text-primary"
+                className="flex flex-col items-center hover:text-primary-300"
                 href={socialMedia.linkedIn}
                 target="_blank"
                 rel="noreferrer"
               >
                 <svg
-                  className="fill-current"
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
                   y="0px"

@@ -39,7 +39,7 @@ const TimelineCenter = ({
       <></>
     )}
     <div
-      className={`bg-primary ${rounded} w-3 h-full absolute left-1/2 -translate-x-1/2`}
+      className={`bg-primary-600 ${rounded} w-3 h-full absolute left-1/2 -translate-x-1/2`}
     ></div>
   </div>
 );
@@ -59,7 +59,7 @@ export const Projects = () => {
   const { projects } = config;
   return (
     <section
-      className={`bg-background p-8 w-full flex flex-col justify-content-center items-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
+      className={`bg-background-50 text-background-900 p-8 w-full flex flex-col justify-content-center items-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
       id="projects"
     >
       <LazyShow>
@@ -68,7 +68,7 @@ export const Projects = () => {
             Projects & Experience
           </h2>
           <h3
-            className={`text-lg text-primary text-center border-2 rounded-2xl p-4 w-fit`}
+            className={`text-lg text-primary-600 text-center border-2 rounded-2xl p-4 w-fit`}
           >
             <q>
               Once a new technology rolls over you, if you&apos;re not part of
@@ -98,7 +98,7 @@ export const Projects = () => {
               duration={1000}
               key="image-converter"
               to="image-converter"
-              className="font-medium text-gray-600 hover:text-secondary text-nowrap underline underline-offset-2"
+              className="font-medium text-gray-600 hover:text-primary-50 text-nowrap underline underline-offset-2"
             >
               Image Converter
             </Link>
@@ -191,7 +191,7 @@ export const Projects = () => {
               duration={1000}
               key="pal-planner"
               to="pal-planner"
-              className="font-medium text-gray-600 hover:text-secondary text-nowrap underline underline-offset-2"
+              className="font-medium text-gray-600 hover:text-primary-50 text-nowrap underline underline-offset-2"
             >
               Pal Planner
             </Link>
@@ -217,7 +217,7 @@ export const Projects = () => {
               duration={1000}
               key="filmfinder"
               to="filmfinder"
-              className="font-medium text-gray-600 hover:text-secondary text-nowrap underline underline-offset-2"
+              className="font-medium text-gray-600 hover:text-primary-50 text-nowrap underline underline-offset-2"
             >
               Filmfinder
             </Link>
@@ -253,7 +253,7 @@ export const Projects = () => {
               duration={1000}
               key="necessities"
               to="necessities"
-              className="font-medium text-gray-500 hover:text-secondary text-nowrap underline underline-offset-2"
+              className="font-medium text-gray-500 hover:text-primary-50 text-nowrap underline underline-offset-2"
             >
               Necessities
             </Link>
@@ -278,7 +278,7 @@ export const Projects = () => {
               duration={1000}
               key="hexxagon"
               to="hexxagon"
-              className="font-medium text-gray-600 hover:text-secondary text-nowrap underline underline-offset-2"
+              className="font-medium text-gray-600 hover:text-primary-50 text-nowrap underline underline-offset-2"
             >
               Hexxagon
             </Link>
@@ -439,7 +439,7 @@ export const Projects = () => {
               {project.tooltip ? (
                 <span
                   className={
-                    'absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 border rounded-full p-2 bg-background aspect-square h-12 flex items-center justify-center text-lg'
+                    'absolute top-0 right-0 translate-x-1/4 -translate-y-1/4 border rounded-full p-2 bg-background-50 aspect-square h-12 flex items-center justify-center text-lg'
                   }
                   data-tooltip-id={project.tooltip.id}
                   data-tooltip-content={project.tooltip.content}
@@ -457,7 +457,7 @@ export const Projects = () => {
                 }
               >
                 <h3
-                  className={`text-2xl text-primary underline underline-offset-8 pb-2 decoration-gray-300`}
+                  className={`text-2xl text-primary-600 underline underline-offset-8 pb-2 decoration-gray-300`}
                   id={project.id}
                 >
                   {project.title}
@@ -480,7 +480,7 @@ export const Projects = () => {
                         <a
                           key={action.href}
                           href={action.href}
-                          className={`text-secondary ${action.className}`}
+                          className={`text-primary-600 ${action.className}`}
                           download={action.download}
                         >
                           {action.text}

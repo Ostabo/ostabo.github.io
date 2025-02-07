@@ -14,6 +14,7 @@ import {
 } from '@headlessui/react';
 import { Link } from 'react-scroll';
 
+import { DarkModeToggleNoSsr } from './DarkModeToggle';
 import config from '../config/index.json';
 
 const Menu = () => {
@@ -22,8 +23,7 @@ const Menu = () => {
   return (
     <>
       <svg
-        className={`hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-background transform translate-x-1/2`}
-        fill="currentColor"
+        className={`main-divider hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-background transform translate-x-1/2`}
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
         aria-hidden="true"
@@ -40,11 +40,15 @@ const Menu = () => {
               <div className="flex items-center justify-between w-full md:w-auto">
                 <a href="">
                   <span className="sr-only">{companyName}</span>
-                  <img alt="logo" className="h-16 w-auto sm:h-16" src={logo} />
+                  <img
+                    alt="logo"
+                    className="h-16 w-auto sm:h-16 logo"
+                    src={logo}
+                  />
                 </a>
                 <div className="-mr-2 flex items-center md:hidden">
                   <PopoverButton
-                    className={`bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
+                    className={`bg-background-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-50`}
                   >
                     <span className="sr-only">Open main menu</span>
                     <FontAwesomeIcon
@@ -71,12 +75,13 @@ const Menu = () => {
               ))}
               <a
                 href={callToAction.href}
-                className={`font-medium text-primary hover:text-secondary`}
+                className={`font-medium text-primary-600 hover:text-primary-300`}
               >
                 {callToAction.text}
                 <FontAwesomeIcon icon={faPaperPlane} className={'mx-2'} />
               </a>
             </div>
+            <DarkModeToggleNoSsr />
           </nav>
         </div>
 
@@ -92,7 +97,7 @@ const Menu = () => {
           <PopoverPanel className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
             {({ close }) => (
               <div
-                className={`rounded-lg shadow-md bg-background ring-1 ring-black ring-opacity-5 overflow-hidden`}
+                className={`rounded-lg shadow-md bg-background-50 ring-1 ring-black ring-opacity-5 overflow-hidden`}
               >
                 <div className="px-5 pt-4 flex items-center justify-between">
                   <div>
@@ -100,7 +105,7 @@ const Menu = () => {
                   </div>
                   <div className="-mr-2">
                     <PopoverButton
-                      className={`bg-background rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-secondary`}
+                      className={`bg-background-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-50`}
                     >
                       <span className="sr-only">Close main menu</span>
                       <FontAwesomeIcon
@@ -129,10 +134,11 @@ const Menu = () => {
                 </div>
                 <a
                   href={callToAction.href}
-                  className={`block w-full px-5 py-3 text-center font-medium text-primary bg-gray-50 hover:bg-gray-100`}
+                  className={`block w-full px-5 py-3 text-center font-medium text-primary-600 bg-gray-50 hover:bg-gray-100`}
                 >
                   {callToAction.text}
                 </a>
+                <DarkModeToggleNoSsr />
               </div>
             )}
           </PopoverPanel>
