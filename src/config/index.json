@@ -390,6 +390,30 @@
       {
         "name": "materialui",
         "weight": 40
+      },
+      {
+        "name": "googlecloud",
+        "weight": 60
+      },
+      {
+        "name": "terraform",
+        "weight": 80
+      },
+      {
+        "name": "nuxtjs",
+        "weight": 60
+      },
+      {
+        "name": "kubernetes",
+        "weight": 80
+      },
+      {
+        "name": "helm", 
+        "weight": 80
+      },
+      {
+        "name": "appwrite",
+        "weight": 30
       }
     ]
   }
