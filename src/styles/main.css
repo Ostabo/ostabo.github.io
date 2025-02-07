@@ -7,11 +7,8 @@ html {
     overflow-x: clip;
 
     &.dark {
-        & svg {
-            fill: white;
-            &.main-divider {
-                fill: black;
-            }
+        & svg.main-divider {
+            fill: black;
         }
 
         & img.logo {
@@ -33,11 +30,8 @@ html {
         }
     }
     &.light {
-        & svg {
-            fill: black;
-            &.main-divider {
-                fill: white;
-            }
+        & svg.main-divider {
+            fill: white;
         }
 
         & .timeline::after {

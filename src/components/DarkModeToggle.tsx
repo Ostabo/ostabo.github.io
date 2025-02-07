@@ -14,9 +14,14 @@ export const DarkModeToggleNoSsr = dynamic(
 );
 
 export const DarkModeToggle = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [darkMode, setDarkMode] = useState(nightwind.checkNightMode());
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    nightwind.init();
+  }, []);
+  const inital = window.localStorage.getItem('nightwind-mode');
+  const [darkMode, setDarkMode] = useState<boolean>(
+    (inital != null && inital == 'dark') ||
+      (inital == null && nightwind.checkNightMode()),
+  );
   useEffect(() => {
     nightwind.enable(darkMode);
   }, [darkMode]);

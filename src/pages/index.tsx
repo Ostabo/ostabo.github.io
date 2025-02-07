@@ -11,7 +11,6 @@ import {
   faXmark,
 } from '@fortawesome/free-solid-svg-icons';
 import Head from 'next/head';
-import nightwind from 'nightwind/helper';
 
 import About from '../components/About';
 import { AnimatedDivider } from '../components/AnimatedDivider';
@@ -38,7 +37,6 @@ const App = () => {
       <Head>
         <title>Ostabo Developer Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script dangerouslySetInnerHTML={{ __html: nightwind.init() }} />
       </Head>
       <noscript>You need to enable JavaScript to see this page.</noscript>
       <div className={`bg-background-50 grid gap-y-16 overflow-hidden`}>
