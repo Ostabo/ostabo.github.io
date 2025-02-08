@@ -37,6 +37,32 @@
   },
   "projects": [
     {
+      "id": "cloud-porsche",
+      "title": "Cloud Porsche",
+      "type": "Cloud Native App",
+      "description": "Parking Management SaaS Solution - Automated Tenant Creation/Deletion, Dashboard, 3D Parking Lot Visualization",
+      "small": "HTWG Konstanz",
+      "actions": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/cloud-porsche/cloud-porsche"
+        }
+      ],
+      "img": "/assets/images/cloud-porsche.svg",
+      "imgWidth": "125",
+      "alt": "Cloud Porsche Logo",
+      "style": {
+        "padding": "25px 0",
+        "margin": "0 25px"
+      },
+      "tooltip": {
+        "id": "cloud-porsche-goat",
+        "content": "Terraform, k8s, NestJS, Vue, GCP",
+        "place": "bottom-end",
+        "icon": "🐐"
+      }
+    },
+    {
       "id": "image-converter",
       "title": "Minimalist Image Converter",
       "type": "Simple Next App",
