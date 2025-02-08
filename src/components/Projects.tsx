@@ -506,6 +506,7 @@ export const Projects = () => {
                         <a
                           key={action.href}
                           href={action.href}
+                          target={'_blank'}
                           className={`text-primary-600 ${action.className}`}
                           download={action.download}
                         >
