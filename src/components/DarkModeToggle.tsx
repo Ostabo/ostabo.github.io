@@ -26,7 +26,7 @@ export const DarkModeToggle = () => {
     nightwind.enable(darkMode);
   }, [darkMode]);
   return (
-    <label className="switch border-primary-900">
+    <label className="switch border rounded-2xl border-primary-50 ms-4 sm:ms-0">
       <input
         className="dark-mode-toggle"
         type="checkbox"

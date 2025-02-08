@@ -138,7 +138,6 @@ const Menu = () => {
                 >
                   {callToAction.text}
                 </a>
-                <DarkModeToggleNoSsr />
               </div>
             )}
           </PopoverPanel>
