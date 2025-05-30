@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 
 import { faAndroid } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-scroll';
@@ -57,6 +58,18 @@ const SlideInTimeLinePiece = ({ children }: Props) => (
 export const Projects = () => {
   const { width } = useResponsiveSize();
   const { projects } = config;
+
+  function iconForAction(action: {
+    href: string;
+    text: string;
+    className?: string;
+    download?: string;
+  }) {
+    if (action.href.includes('github')) return faGithub;
+    if (action.download) return faAndroid;
+    return faArrowUpRightFromSquare;
+  }
+
   return (
     <section
       className={`bg-background-50 text-background-900 p-8 w-full flex flex-col justify-content-center items-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
@@ -539,11 +552,7 @@ export const Projects = () => {
                           {action.text}
                           <FontAwesomeIcon
                             className={'px-1'}
-                            icon={
-                              action.download
-                                ? faAndroid
-                                : faArrowUpRightFromSquare
-                            }
+                            icon={iconForAction(action)}
                           />
                         </a>
                       ),

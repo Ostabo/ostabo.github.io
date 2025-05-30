@@ -40,8 +40,8 @@
       "id": "spit",
       "title": "Spit - Ollama Companion App",
       "type": "React + Tauri = Native App",
-      "description": "Chat with Ollama Models in a Native App",
-      "small": "",
+      "description": "Manage and chat with Ollama Models in a Native Desktop App",
+      "small": "Side Project",
       "actions": [
         {
           "text": "GitHub",
@@ -57,12 +57,12 @@
       "imgWidth": "125",
       "alt": "Spit Logo",
       "style": {
-        "padding": "25px 0",
-        "margin": "0 25px"
+        "padding": "0",
+        "margin": "0 15px"
       },
       "tooltip": {
         "id": "spit-ai",
-        "content": "AI",
+        "content": "✨AI✨",
         "place": "bottom",
         "icon": "✨"
       }
@@ -151,6 +151,10 @@
           "download": "filmfinder.apk"
         }
       ],
+      "style": {
+        "padding": "0",
+        "margin": "0 15px"
+      },
       "img": "/assets/images/filmfinder_logo_high_res.png",
       "imgWidth": "150",
       "alt": "Filmfinder Logo"
@@ -254,7 +258,7 @@
       },
       {
         "name": "react",
-        "weight": 38
+        "weight": 62
       },
       {
         "name": "nodejs",
@@ -348,10 +352,6 @@
       },
       {
         "name": "blender",
-        "weight": 20
-      },
-      {
-        "name": "chrome",
         "weight": 20
       },
       {
@@ -471,6 +471,34 @@
       {
         "name": "appwrite",
         "weight": 30
+      },
+      {
+        "name": "rust",
+        "weight": 30
+      },
+      {
+        "name": "tauri",
+        "weight": 30
+      },
+      {
+        "name": "gradle",
+        "weight": 20
+      },
+      {
+        "name": "neo4j",
+        "weight": 20
+      },
+      {
+        "name": "yaml",
+        "weight": 10
+      },
+      {
+        "name": "windows11",
+        "weight": 10
+      },
+      {
+        "name": "ubuntu",
+        "weight": 10
       }
     ]
   }
