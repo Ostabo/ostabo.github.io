@@ -27,7 +27,7 @@ export const AnimatedDivider = () => {
       ({
         style: {
           width: '100%',
-          height: '100%',
+          height: '100px',
           position: 'relative',
         },
         background: {
@@ -35,7 +35,7 @@ export const AnimatedDivider = () => {
             value: 'transparent',
           },
         },
-        fpsLimit: 60,
+        fpsLimit: 50,
         particles: {
           color: {
             value: '#474fec',
