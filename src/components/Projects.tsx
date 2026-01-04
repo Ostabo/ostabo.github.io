@@ -115,7 +115,33 @@ export const Projects = () => {
 
         <SlideInTimeLinePiece>
           <div></div>
-          <TimelineCenter left={''} right={''} height={'h-16'} extra={'my-2'} />
+          <TimelineCenter left={''} right={''} height={'h-4'} extra={'my-2'} />
+          <div></div>
+        </SlideInTimeLinePiece>
+
+        <SlideInTimeLinePiece>
+          <div></div>
+          <TimelineCenter left={''} right={'top-4'} height={'h-8'} />
+          <div
+            className={`px-4 rounded-lg h-6 mt-2 border-l justify-self-start text-start`}
+          >
+            <Link
+              spy={true}
+              active="active"
+              smooth={true}
+              duration={1000}
+              key="fitforjob"
+              to="fitforjob"
+              className="font-medium text-gray-600 hover:text-primary-50 text-nowrap underline underline-offset-2"
+            >
+              Fit For Job
+            </Link>
+          </div>
+        </SlideInTimeLinePiece>
+
+        <SlideInTimeLinePiece>
+          <div></div>
+          <TimelineCenter left={''} right={''} height={'h-4'} extra={'my-2'} />
           <div></div>
         </SlideInTimeLinePiece>
 

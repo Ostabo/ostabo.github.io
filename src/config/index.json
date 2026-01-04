@@ -68,6 +68,26 @@
       }
     },
     {
+      "id": "fitforjob",
+      "title": "Fit For Job",
+      "type": "Fullstack Web App",
+      "description": "Group Semester Project -\n A platform to help students.",
+      "small": "HTWG Project",
+      "actions": [
+        {
+          "text": "Live",
+          "href": "https://prod.fitforjob.in.htwg-konstanz.de"
+        }
+      ],
+      "img": "/assets/images/fitforjob_logo.png",
+      "imgWidth": "125",
+      "alt": "FitForJob Logo",
+      "style": {
+        "padding": "0",
+        "margin": "0 15px"
+      }
+    },
+    {
       "id": "cloud-porsche",
       "title": "Cloud Porsche",
       "type": "Cloud Native App",
