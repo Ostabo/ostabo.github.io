@@ -246,7 +246,7 @@
       },
       {
         "name": "javascript",
-        "weight": 90
+        "weight": 70
       },
       {
         "name": "typescript",
@@ -258,7 +258,7 @@
       },
       {
         "name": "html5",
-        "weight": 80
+        "weight": 70
       },
       {
         "name": "css3",
@@ -266,19 +266,31 @@
       },
       {
         "name": "java",
-        "weight": 100
+        "weight": 120
       },
       {
         "name": "spring",
+        "weight": 80
+      },
+      {
+        "name": "elasticsearch",
+        "weight": 80
+      },
+      {
+        "name": "kibana",
         "weight": 70
+      },
+      {
+        "name": "prometheus",
+        "weight": 60
       },
       {
         "name": "vuejs",
-        "weight": 70
+        "weight": 60
       },
       {
         "name": "react",
-        "weight": 62
+        "weight": 42
       },
       {
         "name": "nodejs",
@@ -298,11 +310,11 @@
       },
       {
         "name": "sass",
-        "weight": 50
+        "weight": 40
       },
       {
         "name": "bootstrap",
-        "weight": 38
+        "weight": 28
       },
       {
         "name": "tailwindcss",
@@ -364,7 +376,7 @@
       },
       {
         "name": "angularmaterial",
-        "weight": 70
+        "weight": 50
       },
       {
         "name": "bitbucket",
@@ -385,7 +397,7 @@
       },
       {
         "name": "flutter",
-        "weight": 70
+        "weight": 50
       },
       {
         "name": "firebase",
@@ -486,7 +498,7 @@
       },
       {
         "name": "helm",
-        "weight": 80
+        "weight": 60
       },
       {
         "name": "appwrite",

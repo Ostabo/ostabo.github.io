@@ -38,7 +38,7 @@ export const ThreeJsCanvas = () => (
   >
     <Canvas
       data-tooltip-id="head"
-      data-tooltip-content="I tried my best 😭"
+      // data-tooltip-content="I tried my best 😭"
       camera={{
         fov: 75,
         near: 0.1,
