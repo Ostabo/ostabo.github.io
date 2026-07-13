@@ -455,8 +455,8 @@ body {
     display: inline-flex;
     width: max-content;
     max-width: none !important;
-    height: auto !important;
-    min-height: 0 !important;
+    height: 0.88em !important;
+    min-height: 0.88em !important;
     padding: 0.1em 0.4em 0.12em;
     color: var(--portfolio-surface);
     background: var(--portfolio-primary);
@@ -477,6 +477,11 @@ body {
     align-items: center;
     padding-inline: 0.04em;
     line-height: 0.88;
+}
+
+.subtitle-slot {
+    display: inline-flex;
+    align-items: center;
 }
 
 .hero-lead {

@@ -31,14 +31,16 @@ const MainHero = () => {
             <span className="hero-mobile-line">PRODUCT IS</span>
             <div className="hero-title-final">
               <span className="hero-title-is">IS</span>
-              <TextTransition
-                className={`z-10 isolate text-primary-600 sm:justify-center lg:justify-start fade-in`}
-                inline={true}
-                delay={1000}
-                springConfig={presets.wobbly}
-              >
-                {partSubTitles[counter]}
-              </TextTransition>
+              <span className="subtitle-slot fade-in">
+                <TextTransition
+                  className={`z-10 isolate text-primary-600 sm:justify-center lg:justify-start`}
+                  inline={true}
+                  delay={1000}
+                  springConfig={presets.wobbly}
+                >
+                  {partSubTitles[counter]}
+                </TextTransition>
+              </span>
             </div>
           </div>
         </h1>
