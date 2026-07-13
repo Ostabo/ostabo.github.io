@@ -346,9 +346,6 @@ a {
     --portfolio-primary-light: theme('colors.primary.300');
     --portfolio-surface: theme('colors.background.50');
     --portfolio-ink: theme('colors.background.900');
-    --portfolio-muted: color-mix(in srgb, var(--portfolio-ink) 58%, transparent);
-    --portfolio-line: color-mix(in srgb, var(--portfolio-primary) 16%, transparent);
-    --portfolio-panel: var(--portfolio-surface);
     --soft-shadow: 0 24px 70px color-mix(in srgb, var(--portfolio-primary) 12%, transparent);
     --card-shadow: 0 12px 35px color-mix(in srgb, var(--portfolio-primary) 8%, transparent);
 }
@@ -356,9 +353,6 @@ a {
 html.dark {
     --portfolio-surface: theme('colors.background.900');
     --portfolio-ink: theme('colors.background.50');
-    --portfolio-muted: color-mix(in srgb, var(--portfolio-ink) 62%, transparent);
-    --portfolio-line: color-mix(in srgb, var(--portfolio-primary-soft) 18%, transparent);
-    --portfolio-panel: var(--portfolio-surface);
 }
 
 body {
@@ -371,11 +365,6 @@ body {
 .site-shell h3,
 .site-shell h4 {
     font-family: var(--portfolio-font-display);
-}
-
-.site-shell {
-    position: relative;
-    background: var(--portfolio-surface);
 }
 
 .hero-shell {
@@ -392,7 +381,7 @@ body {
 }
 
 .hero-shell > .max-w-7xl > div {
-    background: var(--portfolio-panel);
+    background: var(--portfolio-surface);
     backdrop-filter: blur(18px);
     transition: background-color 240ms ease;
 }
@@ -405,7 +394,7 @@ body {
     right: -10rem;
     width: 10rem;
     height: 100%;
-    background: var(--portfolio-panel);
+    background: var(--portfolio-surface);
     transition: background-color 240ms ease;
     clip-path: polygon(0 0, 100% 50%, 0 100%);
     pointer-events: none;
@@ -429,16 +418,11 @@ body {
     transform: translateY(-2px);
 }
 
-.hero-mobile-menu {
-    z-index: 50;
-}
-
 .hero-title {
     position: relative;
     max-width: 12ch;
     line-height: 0.98;
     letter-spacing: -0.055em;
-    font-family: var(--portfolio-font-display);
 }
 
 .hero-title-lines {
@@ -707,35 +691,11 @@ body {
     text-decoration-color: var(--portfolio-primary-soft);
 }
 
-html.dark body {
-    background: var(--portfolio-surface);
-}
-
-html.dark .site-shell {
-    background: var(--portfolio-surface);
-}
-
-html.dark .hero-shell,
-html.dark .skills-cloud,
-html.dark .project-card {
-    border-color: color-mix(in srgb, var(--portfolio-primary-soft) 13%, transparent);
-    background-color: color-mix(in srgb, var(--portfolio-surface) 82%, transparent);
-}
-
 html.dark .hero-model {
     background: linear-gradient(145deg, var(--portfolio-surface), var(--portfolio-primary));
 }
 
-html.dark .portfolio-section {
-    color: var(--portfolio-ink);
-    background-color: var(--portfolio-surface);
-}
-
-html.dark .portfolio-section h2,
-html.dark .portfolio-section h4,
-html.dark .portfolio-section h3,
-html.dark .portfolio-section span,
-html.dark .portfolio-section b {
+html.dark .portfolio-section :is(h2, h3, h4, span, b) {
     color: var(--portfolio-ink);
 }
 
@@ -763,10 +723,6 @@ html.dark .bubble-divider span {
 
 html.dark .bubble-divider span:nth-child(2) {
     border-color: color-mix(in srgb, var(--portfolio-primary-light) 48%, transparent);
-}
-
-html.dark .hero-shell > .max-w-7xl > div {
-    background: var(--portfolio-panel);
 }
 
 @media (min-width: 1024px) {
