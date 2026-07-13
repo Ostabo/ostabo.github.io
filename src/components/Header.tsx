@@ -94,7 +94,7 @@ const Menu = () => {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          <PopoverPanel className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+          <PopoverPanel className="hero-mobile-menu absolute z-50 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
             {({ close }) => (
               <div
                 className={`rounded-lg shadow-md bg-background-50 ring-1 ring-black ring-opacity-5 overflow-hidden`}

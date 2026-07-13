@@ -59,6 +59,10 @@ export const Projects = () => {
   const { width } = useResponsiveSize();
   const { projects } = config;
 
+  const openProject = (href?: string) => {
+    if (href) window.open(href, '_blank', 'noopener,noreferrer');
+  };
+
   function iconForAction(action: {
     href: string;
     text: string;
@@ -72,7 +76,7 @@ export const Projects = () => {
 
   return (
     <section
-      className={`bg-background-50 text-background-900 p-8 w-full flex flex-col justify-content-center items-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
+      className={`portfolio-section bg-background-50 text-background-900 p-8 w-full flex flex-col justify-content-center items-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
       id="projects"
     >
       <LazyShow>
@@ -115,7 +119,7 @@ export const Projects = () => {
 
         <SlideInTimeLinePiece>
           <div></div>
-          <TimelineCenter left={''} right={''} height={'h-4'} extra={'my-2'} />
+          <TimelineCenter left={''} right={''} height={'h-16'} extra={'my-2'} />
           <div></div>
         </SlideInTimeLinePiece>
 
@@ -194,6 +198,12 @@ export const Projects = () => {
               Image Converter
             </Link>
           </div>
+        </SlideInTimeLinePiece>
+
+        <SlideInTimeLinePiece>
+          <div></div>
+          <TimelineCenter left={''} right={''} height={'h-4'} extra={'mb-2'} />
+          <div></div>
         </SlideInTimeLinePiece>
 
         <SlideInTimeLinePiece>
@@ -525,7 +535,16 @@ export const Projects = () => {
         {projects?.map((project) => (
           <LazyShow key={project.id} threshold={0.2}>
             <div
-              className={`rounded-lg border text-start text-balance h-full p-8 grid lg:grid-flow-col-dense items-center justify-between justify-items-center relative`}
+              className={`project-card rounded-lg border text-start text-balance h-full p-8 grid lg:grid-flow-col-dense items-center justify-between justify-items-center relative`}
+              role={project.actions?.[0] ? 'link' : undefined}
+              tabIndex={project.actions?.[0] ? 0 : undefined}
+              onClick={() => openProject(project.actions?.[0]?.href)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  openProject(project.actions?.[0]?.href);
+                }
+              }}
             >
               {project.tooltip ? (
                 <span
@@ -572,6 +591,8 @@ export const Projects = () => {
                           key={action.href}
                           href={action.href}
                           target={'_blank'}
+                          rel={'noreferrer'}
+                          onClick={(event) => event.stopPropagation()}
                           className={`text-primary-600 ${action.className}`}
                           download={action.download}
                         >

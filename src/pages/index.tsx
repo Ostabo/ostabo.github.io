@@ -39,9 +39,9 @@ const App = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <noscript>You need to enable JavaScript to see this page.</noscript>
-      <div className={`bg-background-50 grid gap-y-16 overflow-hidden`}>
+      <div className="site-shell bg-background-50 grid gap-y-16 overflow-hidden">
         <LazyShow>
-          <div className={`relative bg-background-50`}>
+          <div className="hero-shell relative bg-background-50">
             <div className="max-w-7xl mx-auto">
               <div
                 className={`relative bg-background-50 z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32`}

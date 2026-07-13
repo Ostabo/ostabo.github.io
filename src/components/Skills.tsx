@@ -119,7 +119,7 @@ export const Skills = () => {
   const isSmall = useResponsiveSize().width < 470;
   return isSmall ? (
     <section
-      className={`bg-background-50 p-8 w-full flex flex-col items-center justify-content-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
+      className={`skills-cloud bg-background-50 p-8 w-full flex flex-col items-center justify-content-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
       id="skills"
     >
       {distributedItems.map((items, ind) => (
@@ -133,7 +133,7 @@ export const Skills = () => {
   ) : (
     <LazyShow threshold={0.2}>
       <section
-        className={`bg-background-50 p-8 w-full flex items-center justify-content-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
+        className={`skills-cloud bg-background-50 p-8 w-full flex items-center justify-content-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
         id="skills"
       >
         {distributedItems.map((items, ind) => (

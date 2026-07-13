@@ -49,6 +49,16 @@ html {
     }
 }
 
+@keyframes fade-in {
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in 3s linear forwards;
+}
+
 a {
     cursor: pointer;
 }
@@ -327,3 +337,566 @@ a {
     }
 }
 
+/* Portfolio polish: keep original character, improve rhythm and depth. */
+:root {
+    --portfolio-font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --portfolio-font-display: ui-rounded, "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+    --portfolio-primary: theme('colors.primary.600');
+    --portfolio-primary-soft: theme('colors.primary.50');
+    --portfolio-primary-light: theme('colors.primary.300');
+    --portfolio-surface: theme('colors.background.50');
+    --portfolio-ink: theme('colors.background.900');
+    --portfolio-muted: color-mix(in srgb, var(--portfolio-ink) 58%, transparent);
+    --portfolio-line: color-mix(in srgb, var(--portfolio-primary) 16%, transparent);
+    --portfolio-panel: var(--portfolio-surface);
+    --soft-shadow: 0 24px 70px color-mix(in srgb, var(--portfolio-primary) 12%, transparent);
+    --card-shadow: 0 12px 35px color-mix(in srgb, var(--portfolio-primary) 8%, transparent);
+}
+
+html.dark {
+    --portfolio-surface: theme('colors.background.900');
+    --portfolio-ink: theme('colors.background.50');
+    --portfolio-muted: color-mix(in srgb, var(--portfolio-ink) 62%, transparent);
+    --portfolio-line: color-mix(in srgb, var(--portfolio-primary-soft) 18%, transparent);
+    --portfolio-panel: var(--portfolio-surface);
+}
+
+body {
+    background: var(--portfolio-surface);
+    font-family: var(--portfolio-font-body);
+}
+
+.site-shell h1,
+.site-shell h2,
+.site-shell h3,
+.site-shell h4 {
+    font-family: var(--portfolio-font-display);
+}
+
+.site-shell {
+    position: relative;
+    background: var(--portfolio-surface);
+}
+
+.hero-shell {
+    min-height: 44rem;
+    margin: 1rem;
+    border: 1px solid color-mix(in srgb, var(--portfolio-primary) 13%, transparent);
+    border-radius: 2rem;
+    box-shadow: var(--soft-shadow);
+    overflow: hidden;
+}
+
+.hero-shell .main-divider {
+    display: none;
+}
+
+.hero-shell > .max-w-7xl > div {
+    background: var(--portfolio-panel);
+    backdrop-filter: blur(18px);
+    transition: background-color 240ms ease;
+}
+
+.hero-shell > .max-w-7xl > div::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: -10rem;
+    width: 10rem;
+    height: 100%;
+    background: var(--portfolio-panel);
+    transition: background-color 240ms ease;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    pointer-events: none;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 20;
+}
+
+.hero-shell nav {
+    padding: 0.35rem;
+    border-radius: 1rem;
+}
+
+.hero-shell nav a {
+    transition: color 180ms ease, transform 180ms ease;
+}
+
+.hero-shell nav a:hover {
+    transform: translateY(-2px);
+}
+
+.hero-mobile-menu {
+    z-index: 50;
+}
+
+.hero-title {
+    position: relative;
+    max-width: 12ch;
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+    font-family: var(--portfolio-font-display);
+}
+
+.hero-title-lines {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.08;
+    white-space: nowrap;
+}
+
+.hero-title-lines > span {
+    display: block;
+    line-height: 1.08;
+}
+
+.hero-mobile-line {
+    display: none !important;
+}
+
+.hero-title-final {
+    display: inline-flex !important;
+    align-items: center;
+    line-height: 1.08;
+    gap: 0.3em;
+}
+
+.hero-title .text-primary-600 {
+    position: relative;
+    box-sizing: content-box;
+    display: inline-flex;
+    width: max-content;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0.1em 0.4em 0.12em;
+    color: var(--portfolio-surface);
+    background: var(--portfolio-primary);
+    border: 1px solid color-mix(in srgb, var(--portfolio-surface) 35%, transparent);
+    border-radius: 999px;
+    box-shadow: 0.12em 0.12em 0 var(--portfolio-primary-soft);
+    font-size: clamp(1.75rem, 4.6vw, 3.55rem);
+    line-height: 0.88;
+    white-space: nowrap !important;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    z-index: 30;
+}
+
+.hero-title .text-primary-600 > div {
+    display: flex;
+    align-items: center;
+    padding-inline: 0.04em;
+    line-height: 0.88;
+}
+
+.hero-lead {
+    padding-left: 1rem;
+    border-left: 3px solid var(--portfolio-primary);
+    line-height: 1.65;
+}
+
+.hero-model {
+    z-index: 1;
+    isolation: isolate;
+    background:
+        radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--portfolio-surface) 72%, transparent) 0 18%, transparent 42%),
+        linear-gradient(145deg, var(--portfolio-primary-soft), var(--portfolio-primary-light));
+}
+
+.hero-model::before,
+.hero-model::after {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    width: min(70%, 30rem);
+    aspect-ratio: 1;
+    border: 1px solid color-mix(in srgb, var(--portfolio-surface) 58%, transparent);
+    border-radius: 35% 65% 66% 34% / 48% 39% 61% 52%;
+    animation: bubble-turn 22s linear infinite;
+}
+
+.hero-model::before {
+    top: 11%;
+    right: 7%;
+}
+
+.hero-model::after {
+    bottom: 4%;
+    left: 6%;
+    width: min(42%, 17rem);
+    border-color: color-mix(in srgb, var(--portfolio-primary) 30%, transparent);
+    animation-direction: reverse;
+    animation-duration: 28s;
+}
+
+.hero-model canvas {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes bubble-turn {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.08); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.bubble-divider {
+    position: relative;
+    width: min(100% - 2rem, 90rem);
+    height: 7rem;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+.bubble-divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    left: 8%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--portfolio-primary) 22%, transparent), transparent);
+}
+
+.bubble-divider span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8rem;
+    aspect-ratio: 1;
+    border: 1px solid color-mix(in srgb, var(--portfolio-primary) 32%, transparent);
+    border-radius: 37% 63% 58% 42% / 43% 39% 61% 57%;
+    animation: divider-bubble 20s ease-in-out infinite;
+}
+
+.bubble-divider span:nth-child(1) {
+    margin: -4rem 0 0 -28rem;
+}
+
+.bubble-divider span:nth-child(2) {
+    width: 6rem;
+    margin: -3rem 0 0 -18rem;
+    animation-delay: -3s;
+}
+
+.bubble-divider span:nth-child(3) {
+    width: 5rem;
+    margin: -2.5rem 0 0 -9rem;
+    animation-delay: -7s;
+    animation-direction: reverse;
+}
+
+.bubble-divider span:nth-child(4) {
+    width: 5rem;
+    margin: -2.5rem 0 0 -2.5rem;
+    animation-delay: -10s;
+}
+
+.bubble-divider span:nth-child(5) {
+    width: 6rem;
+    margin: -3rem 0 0 6rem;
+    animation-delay: -4s;
+    animation-direction: reverse;
+}
+
+.bubble-divider span:nth-child(6) {
+    width: 10rem;
+    margin: -5rem 0 0 15rem;
+    animation-delay: -13s;
+}
+
+.bubble-divider span:nth-child(7) {
+    width: 5rem;
+    margin: -2.5rem 0 0 26rem;
+    animation-delay: -17s;
+    animation-direction: reverse;
+}
+
+@keyframes divider-bubble {
+    0%, 100% { transform: translateX(-1.5rem) rotate(0deg) scale(0.92); }
+    50% { transform: translateX(1.5rem) rotate(180deg) scale(1.08); }
+}
+
+.skills-cloud {
+    position: relative;
+    padding-block: 4rem;
+    border: 1px solid color-mix(in srgb, var(--portfolio-primary) 10%, transparent);
+    border-radius: 2rem;
+    background: color-mix(in srgb, var(--portfolio-surface) 62%, transparent);
+    box-shadow: var(--card-shadow);
+}
+
+.skill-container {
+    border: 1px solid color-mix(in srgb, var(--portfolio-primary) 12%, transparent);
+    box-shadow: 0 6px 18px color-mix(in srgb, var(--portfolio-primary) 8%, transparent);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.skill-container:hover {
+    z-index: 2;
+    transform: translateY(-0.45rem) rotate(4deg) scale(1.06);
+    box-shadow: 0 16px 30px color-mix(in srgb, var(--portfolio-primary) 20%, transparent);
+}
+
+.portfolio-section > div:first-child h2 {
+    padding-bottom: 0.5rem;
+    font-size: clamp(2rem, 5vw, 3.75rem);
+    letter-spacing: -0.05em;
+}
+
+.portfolio-section > div:first-child h3 {
+    max-width: 46rem;
+    border-color: color-mix(in srgb, var(--portfolio-primary) 25%, transparent);
+    background: color-mix(in srgb, var(--portfolio-primary-soft) 18%, transparent);
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+.portfolio-section {
+    background-color: var(--portfolio-surface);
+}
+
+.timeline {
+    width: min(100%, 58rem);
+}
+
+.project-card {
+    min-height: 17rem;
+    border-color: color-mix(in srgb, var(--portfolio-primary) 14%, transparent);
+    border-radius: 1.5rem;
+    background: color-mix(in srgb, var(--portfolio-surface) 76%, transparent);
+    box-shadow: var(--card-shadow);
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.project-card[role="link"] {
+    cursor: pointer;
+}
+
+.project-card[role="link"]:focus-visible {
+    outline: 3px solid var(--portfolio-primary);
+    outline-offset: 4px;
+}
+
+.project-card:hover {
+    z-index: 2;
+    border-color: color-mix(in srgb, var(--portfolio-primary) 45%, transparent);
+    box-shadow: 0 24px 55px color-mix(in srgb, var(--portfolio-primary) 15%, transparent);
+    transform: translateY(-0.5rem) rotate(-0.35deg);
+}
+
+.project-card > img {
+    max-height: 8rem;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 16px color-mix(in srgb, var(--portfolio-primary) 14%, transparent));
+    transition: transform 220ms ease;
+}
+
+.project-card:hover > img {
+    transform: scale(1.06) rotate(2deg);
+}
+
+.project-card h3 {
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--portfolio-primary-soft);
+}
+
+html.dark body {
+    background: var(--portfolio-surface);
+}
+
+html.dark .site-shell {
+    background: var(--portfolio-surface);
+}
+
+html.dark .hero-shell,
+html.dark .skills-cloud,
+html.dark .project-card {
+    border-color: color-mix(in srgb, var(--portfolio-primary-soft) 13%, transparent);
+    background-color: color-mix(in srgb, var(--portfolio-surface) 82%, transparent);
+}
+
+html.dark .hero-model {
+    background: linear-gradient(145deg, var(--portfolio-surface), var(--portfolio-primary));
+}
+
+html.dark .portfolio-section {
+    color: var(--portfolio-ink);
+    background-color: var(--portfolio-surface);
+}
+
+html.dark .portfolio-section h2,
+html.dark .portfolio-section h4,
+html.dark .portfolio-section h3,
+html.dark .portfolio-section span,
+html.dark .portfolio-section b {
+    color: var(--portfolio-ink);
+}
+
+html.dark .portfolio-section > div:first-child h3 {
+    color: var(--portfolio-primary-light);
+    border-color: color-mix(in srgb, var(--portfolio-primary-soft) 28%, transparent);
+    background: color-mix(in srgb, var(--portfolio-primary) 14%, transparent);
+}
+
+html.dark .timeline {
+    border-color: color-mix(in srgb, var(--portfolio-primary-soft) 18%, transparent);
+}
+
+html.dark .timeline::after {
+    background: linear-gradient(0deg, color-mix(in srgb, var(--portfolio-surface) 92%, transparent) 0%, transparent 60%);
+}
+
+html.dark .bubble-divider::before {
+    background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--portfolio-primary-soft) 28%, transparent), transparent);
+}
+
+html.dark .bubble-divider span {
+    border-color: color-mix(in srgb, var(--portfolio-primary-soft) 34%, transparent);
+}
+
+html.dark .bubble-divider span:nth-child(2) {
+    border-color: color-mix(in srgb, var(--portfolio-primary-light) 48%, transparent);
+}
+
+html.dark .hero-shell > .max-w-7xl > div {
+    background: var(--portfolio-panel);
+}
+
+@media (min-width: 1024px) {
+    .hero-shell > .max-w-7xl > div {
+        min-height: 44rem;
+        clip-path: none;
+    }
+}
+
+@media (min-width: 650px) {
+    .hero-title {
+        max-width: none;
+        overflow: visible;
+    }
+
+    .hero-title .text-primary-600 {
+        display: inline-flex !important;
+        overflow: visible;
+    }
+}
+
+@media (max-width: 1023px) {
+    .hero-shell {
+        min-height: auto;
+    }
+
+    .hero-copy {
+        padding-bottom: 3rem;
+    }
+
+    .hero-title {
+        margin-inline: auto;
+    }
+
+    .hero-title .text-primary-600 {
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .site-shell {
+        row-gap: 2.5rem;
+    }
+
+    .hero-shell {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .hero-copy {
+        padding-inline: 1rem !important;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        margin-inline: 0;
+        text-align: left;
+    }
+
+    .hero-title .text-primary-600 {
+        margin-inline: 0;
+        justify-content: flex-start;
+        max-width: calc(100vw - 2.5rem) !important;
+        height: 2.16em !important;
+        min-height: 2.16em !important;
+        padding-inline: 0.45em;
+        font-size: inherit;
+        white-space: normal !important;
+    }
+
+    .hero-title .text-primary-600 > div {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .hero-desktop-line {
+        display: none !important;
+    }
+
+    .hero-mobile-line {
+        display: block !important;
+    }
+
+    .hero-title-final {
+        display: contents !important;
+    }
+
+    .hero-title-is {
+        display: none;
+    }
+
+    .hero-lead {
+        text-align: left;
+    }
+
+    .skills-cloud {
+        padding: 3rem 2rem;
+        border-radius: 1.25rem;
+    }
+
+    .timeline > div {
+        min-width: 0;
+    }
+
+    .timeline a {
+        display: block;
+        max-width: 100%;
+        white-space: normal !important;
+        overflow-wrap: break-word;
+        word-break: normal;
+        text-wrap: pretty;
+        line-height: 1.25;
+    }
+
+    .project-card {
+        padding: 1.25rem;
+        border-radius: 1.25rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-model::before,
+    .hero-model::after {
+        animation: none;
+    }
+
+    .skill-container,
+    .project-card,
+    .project-card > img {
+        transition: none;
+    }
+}

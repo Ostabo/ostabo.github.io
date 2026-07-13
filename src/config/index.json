@@ -22,7 +22,6 @@
     "href": "mailto:hire@ostabo.com"
   },
   "mainHero": {
-    "title": "SOMETIMES THE PRODUCT IS",
     "subtitle": "THE PERSON;OSKAR BORKENHAGEN;OSTABO",
     "primaryAction": {
       "text": "Skillset",
@@ -160,10 +159,6 @@
       "description": "Group Project for App Development",
       "small": "HTWG Konstanz",
       "actions": [
-        {
-          "text": "GitHub",
-          "href": "https://github.com/filmfinder/filmfinder"
-        },
         {
           "text": "Download APK",
           "href": "/assets/filmfinder.apk",
@@ -519,6 +514,20 @@
       {
         "name": "neo4j",
         "weight": 20
+      },
+      {
+        "name": "mongodb",
+        "weight": 38
+      },
+      {
+        "name": "mqtt",
+        "weight": 55,
+        "url": "https://cdn.simpleicons.org/mqtt/660066"
+      },
+      {
+        "name": "coolify",
+        "weight": 30,
+        "url": "https://cdn.simpleicons.org/coolify/3B8EEA"
       },
       {
         "name": "yaml",
