@@ -46,7 +46,7 @@ const MainHero = () => {
         </h1>
         <p className="hero-lead mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
           I&apos;m a software engineer with a passion for <br />
-          <b>WebDev / AppDev / DevOps</b> <br />
+          <b>Fullstack Development / DevOps</b> <br />
           and everything related to computer science. <br />
           Also I like cookies 🍪.
         </p>
