@@ -162,7 +162,7 @@
         {
           "text": "Download APK",
           "href": "/assets/filmfinder.apk",
-          "className": "p-4",
+          "className": "pt-4",
           "download": "filmfinder.apk"
         }
       ],
