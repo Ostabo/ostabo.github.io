@@ -535,7 +535,7 @@ export const Projects = () => {
         {projects?.map((project) => (
           <LazyShow key={project.id} threshold={0.2}>
             <div
-              className={`project-card rounded-lg border text-start text-balance h-full p-8 grid lg:grid-flow-col-dense items-center justify-between justify-items-center relative`}
+              className={`project-card relative grid h-full grid-cols-1 grid-rows-[auto_auto] items-start content-start gap-8 rounded-lg border p-5 pb-8 text-start text-balance lg:grid-cols-[2fr_1fr] lg:grid-rows-1 lg:items-center lg:p-8`}
               role={project.actions?.[0] ? 'link' : undefined}
               tabIndex={project.actions?.[0] ? 0 : undefined}
               onClick={() => openProject(project.actions?.[0]?.href)}
@@ -563,7 +563,7 @@ export const Projects = () => {
               )}
               <span
                 className={
-                  'p-4 self-start flex flex-col justify-stretch h-full whitespace-pre-line'
+                  'w-full self-start flex flex-col justify-stretch h-full p-4 whitespace-pre-line'
                 }
               >
                 <h3
@@ -610,7 +610,7 @@ export const Projects = () => {
               <img
                 src={project.img}
                 width={project.imgWidth}
-                style={project.style}
+                className={'justify-self-center'}
                 alt={project.alt}
               ></img>
             </div>

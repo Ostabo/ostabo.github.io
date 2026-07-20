@@ -844,7 +844,6 @@ html.dark .bubble-divider span:nth-child(2) {
     }
 
     .project-card {
-        padding: 1.25rem;
         border-radius: 1.25rem;
     }
 }

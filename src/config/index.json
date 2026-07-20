@@ -55,10 +55,6 @@
       "img": "/assets/images/spit-logo.png",
       "imgWidth": "125",
       "alt": "Spit Logo",
-      "style": {
-        "padding": "0",
-        "margin": "0 15px"
-      },
       "tooltip": {
         "id": "spit-ai",
         "content": "✨AI✨",
@@ -80,11 +76,7 @@
       ],
       "img": "/assets/images/fitforjob_logo.png",
       "imgWidth": "125",
-      "alt": "FitForJob Logo",
-      "style": {
-        "padding": "0",
-        "margin": "0 15px"
-      }
+      "alt": "FitForJob Logo"
     },
     {
       "id": "cloud-porsche",
@@ -101,10 +93,6 @@
       "img": "/assets/images/cloud-porsche.svg",
       "imgWidth": "125",
       "alt": "Cloud Porsche Logo",
-      "style": {
-        "padding": "25px 0",
-        "margin": "0 25px"
-      },
       "tooltip": {
         "id": "cloud-porsche-goat",
         "content": "Terraform, k8s, NestJS, Vue, GCP",
@@ -126,11 +114,7 @@
       ],
       "img": "/assets/images/img_converter_logo.png",
       "imgWidth": "125",
-      "alt": "Minimalist Image Converter Logo",
-      "style": {
-        "padding": "25px 0",
-        "margin": "0 25px"
-      }
+      "alt": "Minimalist Image Converter Logo"
     },
     {
       "id": "pal-planner",
@@ -141,10 +125,6 @@
       "img": "/assets/images/pal_planner_logo.png",
       "imgWidth": "125",
       "alt": "pal planner",
-      "style": {
-        "padding": "25px 0",
-        "margin": "0 25px"
-      },
       "tooltip": {
         "id": "pal-planner-dead",
         "content": "Another Dead Side Project 😢",
@@ -166,10 +146,6 @@
           "download": "filmfinder.apk"
         }
       ],
-      "style": {
-        "padding": "0",
-        "margin": "0 15px"
-      },
       "img": "/assets/images/filmfinder_logo_high_res.png",
       "imgWidth": "150",
       "alt": "Filmfinder Logo"
@@ -189,10 +165,6 @@
       "img": "/assets/images/necessities_logo.png",
       "imgWidth": "125",
       "alt": "necessities",
-      "style": {
-        "padding": "25px 0",
-        "margin": "0 25px"
-      },
       "tooltip": {
         "id": "necessities-dead",
         "content": "Another Dead Side Project 😢",
@@ -220,10 +192,6 @@
       "img": "/assets/images/hexxagon_logo.png",
       "imgWidth": "125",
       "alt": "hexxagon",
-      "style": {
-        "padding": "25px 0",
-        "margin": "0 25px"
-      },
       "tooltip": {
         "id": "hexxagon-love",
         "content": "Hexagons are the bestagons ❤️",
