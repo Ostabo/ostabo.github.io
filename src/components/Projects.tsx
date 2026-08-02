@@ -250,7 +250,7 @@ export const Projects = () => {
               <b>Skillworks AG</b>
             </h4>
             <span>
-              <small>Apr. 2024</small>
+              <small>Apr. 2024 · while employed</small>
               <br />
               Konstanz, Germany
               <br />
@@ -422,7 +422,7 @@ export const Projects = () => {
             rounded={'rounded-b-full'}
           />
           <div
-            className={`px-4 mt-8 rounded-lg border-l h-26 justify-self-start text-start relative`}
+            className={`px-4 py-2 mt-8 rounded-lg border-l-4 border-primary-600 bg-primary-600/5 h-26 justify-self-start text-start relative`}
           >
             {width > 658 ? (
               <img
@@ -432,11 +432,16 @@ export const Projects = () => {
                 className="absolute -translate-x-full -left-2 top-10"
               />
             ) : null}
-            <h4 className={`text-xl`}>
+            <h4 className={`text-xl flex flex-wrap items-center gap-2`}>
               <b>Skillworks AG</b>
+              <small className="rounded-full bg-primary-600 px-2 py-0.5 text-xs font-bold text-white">
+                CURRENT
+              </small>
             </h4>
             <span>
-              <small>Sept. 2022</small>
+              <small className="font-semibold text-primary-600">
+                Mar. 2022 - Present
+              </small>
               <br />
               Konstanz, Germany
               <br />
@@ -447,9 +452,11 @@ export const Projects = () => {
                 }
                 data-tooltip-place="bottom-end"
               >
-                Working Student
+                Software Developer
                 <Tooltip id="skillworks-working" className={'z-10'} />
               </i>
+              <br />
+              <small>Intern → Software Developer, Sept. 2022</small>
             </span>
           </div>
         </SlideInTimeLinePiece>
