@@ -593,6 +593,7 @@ export const Projects = () => {
                         text: string;
                         className?: string;
                         download?: string;
+                        icon?: any;
                       }) => (
                         <a
                           key={action.href}
@@ -606,7 +607,7 @@ export const Projects = () => {
                           {action.text}
                           <FontAwesomeIcon
                             className={'px-1'}
-                            icon={iconForAction(action)}
+                            icon={action.icon ?? iconForAction(action)}
                           />
                         </a>
                       ),

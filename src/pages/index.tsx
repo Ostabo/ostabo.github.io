@@ -6,6 +6,7 @@ import {
   faArrowUpRightFromSquare,
   faBars,
   faCookieBite,
+  faFilePdf,
   faLink,
   faPaperPlane,
   faXmark,
@@ -29,6 +30,7 @@ library.add(
   faBars,
   faXmark,
   faLink,
+  faFilePdf,
 );
 
 const App = () => {

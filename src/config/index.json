@@ -88,6 +88,13 @@
         {
           "text": "GitHub",
           "href": "https://github.com/cloud-porsche/cloud-porsche"
+        },
+        {
+          "text": "Report",
+          "href": "/assets/cp-report.pdf",
+          "className": "p-4",
+          "download": "cp-report.pdf",
+          "icon": "file-pdf"
         }
       ],
       "img": "/assets/images/cloud-porsche.svg",
