@@ -588,28 +588,35 @@ export const Projects = () => {
                   <br />
                   <small>
                     {project.actions?.map(
-                      (action: {
-                        href: string;
-                        text: string;
-                        className?: string;
-                        download?: string;
-                        icon?: any;
-                      }) => (
-                        <a
-                          key={action.href}
-                          href={action.href}
-                          target={'_blank'}
-                          rel={'noreferrer'}
-                          onClick={(event) => event.stopPropagation()}
-                          className={`text-primary-600 ${action.className}`}
-                          download={action.download}
-                        >
-                          {action.text}
-                          <FontAwesomeIcon
-                            className={'px-1'}
-                            icon={action.icon ?? iconForAction(action)}
-                          />
-                        </a>
+                      (
+                        action: {
+                          href: string;
+                          text: string;
+                          className?: string;
+                          download?: string;
+                          icon?: any;
+                        },
+                        i,
+                      ) => (
+                        <span key={action.href}>
+                          <a
+                            href={action.href}
+                            target={'_blank'}
+                            rel={'noreferrer'}
+                            onClick={(event) => event.stopPropagation()}
+                            className={`text-primary-600 ${action.className}`}
+                            download={action.download}
+                          >
+                            {action.text}
+                            <FontAwesomeIcon
+                              className={'px-1'}
+                              icon={action.icon ?? iconForAction(action)}
+                            />
+                          </a>
+                          <span key={`separator-${i}`} className={'px-1 pe-2'}>
+                            {i < project.actions!.length - 1 ? '·' : ''}
+                          </span>
+                        </span>
                       ),
                     )}
                   </small>

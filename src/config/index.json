@@ -47,7 +47,6 @@
           "href": "https://github.com/ostabo/Spit"
         },
         {
-          "className": "p-4",
           "text": "Landing Page",
           "href": "https://spit.ostabo.com"
         }
@@ -92,7 +91,6 @@
         {
           "text": "Report",
           "href": "/assets/cp-report.pdf",
-          "className": "p-4",
           "download": "cp-report.pdf",
           "icon": "file-pdf"
         }
@@ -192,8 +190,7 @@
         },
         {
           "text": "Live Demo",
-          "href": "https://ostabo.com/Hexxagon_UI/",
-          "className": "p-4"
+          "href": "https://ostabo.com/Hexxagon_UI/"
         }
       ],
       "img": "/assets/images/hexxagon_logo.png",
